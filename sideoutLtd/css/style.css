@@ -157,10 +157,10 @@ nav ul li ul li:hover { background: #f8f9fa; }
 
 /* Background color change on Hover */
 nav a:hover { 
-	color: #ee1111;	
+	color: #ffffff;	
 }
 .menu li.active  a{ 
-	color: #ee1111;	
+	color: #ffffff;	
 }
 
 /* Hide Dropdowns by Default
@@ -364,7 +364,7 @@ li > a:only-child:after { content: ''; }
 /*--/banner-info--*/
 
 .banner {
-    background: #d2acac;
+    background: #e5291a;
     position: relative;
     z-index: 1;
 }
