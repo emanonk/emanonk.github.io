@@ -16,7 +16,7 @@ var shortContent2 = document.getElementById('short-content2')
 var shortContent3 = document.getElementById('short-content3')
 var beachTitle = document.getElementById('beachHeader')
 
-var part1 = '<div id="venueBooking" style="top:;bottom:;left:;right:;width:960px;height:1200px;position:" class="htco1" data-state="hasContent" id="HtmlCmpnnt0-apz">\
+var part1 = '<div id="venueBooking" style="top:;bottom:;left:;right:;height:1200px;position:" class="htco1" data-state="hasContent" id="HtmlCmpnnt0-apz">\
   <div id="HtmlCmpnnt0-apziFrameHolder" class="htco1iFrameHolder">\
     <iframe width="100%" height="100%" name="htmlComp-iframe" scrolling="auto"';
 
