@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sideout | Book a court</title>
+    <title>Sideout | Calendar</title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- <meta id="wixMobileViewport" name="viewport" content="width=980, user-scalable=yes"> -->
     <!-- <meta id="wixMobileViewport" name="viewport" content="minimum-scale=0.25, maximum-scale=1.2"/> -->
     <link rel="icon" type="image/jpg" href="images/tab-logo.png" sizes="32x20" />
     <!-- Bootstrap CSS -->
@@ -27,13 +26,6 @@
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 
-
-    <style type="text/css" data-styleid="htco1">
-    .htco1iFrameHolder {width:100%;height:100%;}
-    .htco1iFrameHolder > iframe {position:absolute;}
-    .htco1[data-state="noContent"] {background-color:#A5A5A5;}
-    </style>
-
 </head>
 <body>
     <header class="site-header">
@@ -49,11 +41,11 @@
                         <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                             <li><a href="index.html">Home</a></li>
                             <li><a href="membership.html">Membership</a></li>
-                            <li class="current-menu-item"><a href="book-a-court.html">Book a court</a></li>
-                            <li><a href="calendar-leyton.html">Calendar</a></li>
+                            <li><a href="book-a-court.html">Book a court</a></li>
+                            <li class="current-menu-item"><a href="calendar.html">Calendar</a></li>
                             <li><a href="tournaments.html">Tournaments</a></li>
                             <li><a href="camps-and-clinics.html">Camps & Clinics</a></li>
-                            <li><a href="meet-the-team.html">Meet the Team</a></li>
+                            <li><a href="meet-the-team.html">About us</a></li>
                         </ul>
                     </nav><!-- .site-navigation -->
 
@@ -76,138 +68,130 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-heading">
-                    <h2 class="entry-title">Our venues</h2>
+                    <h2 class="entry-title">Our Tournaments this year</h2>
                 </div><!-- .section-heading -->
             </div><!-- .col -->
         </div><!-- .row -->
 
-        <div class="row">
-            <div class="col-12 col-lg-6">
-                <div class="cause-wrap d-flex flex-wrap justify-content-between">
-                    <figure class="m-0">
-                        <img src="images/featured-causes.jpg" alt="">
-                    </figure>
-
-                    <div class="cause-content-wrap">
-                        <header class="entry-header d-flex flex-wrap align-items-center">
-                            <h3 class="entry-title w-100 m-0"><a href="#">Leyton Beach</a></h3>
-                        </header><!-- .entry-header -->
-
-                        <div class="entry-content">
-                            <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris. Lorem ipsum dolor sit amet, consectetur.</p>
-                        </div><!-- .entry-content -->
-
-                        <div class="entry-footer mt-5">
-                            <a href="#" onclick="appender('leytonBooking')" class="btn gradient-bg mr-2">Book a court</a>
-                        </div><!-- .entry-footer -->
-                    </div><!-- .cause-content-wrap -->
-
-
-                </div><!-- .cause-wrap -->
-            </div><!-- .col -->
-
-            <div class="col-12 col-lg-6">
-                <div class="cause-wrap d-flex flex-wrap justify-content-between">
-                    <figure class="m-0">
-                        <img src="images/eye-for.jpg" alt="">
-                    </figure>
-
-                    <div class="cause-content-wrap">
-                        <header class="entry-header d-flex flex-wrap align-items-center">
-                            <h3 class="entry-title w-100 m-0"><a href="#">Worthing Beach</a></h3>
-
-                            
-                        </header><!-- .entry-header -->
-
-                        <div class="entry-content">
-                            <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris. Lorem ipsum dolor sit amet, consectetur.</p>
-                        </div><!-- .entry-content -->
-
-                        <div class="entry-footer mt-5">
-                            <a href="#" onclick="appender('worthingBooking')" class="btn gradient-bg mr-2">Book a court</a>
-                        </div><!-- .entry-footer -->
-                    </div><!-- .cause-content-wrap -->
-
-
-                </div><!-- .cause-wrap -->
-            </div><!-- .col -->
-        </div><!-- .row -->
+        
     </div><!-- .container -->
 </div><!-- .featured-cause -->
 
-<div class="container">
-    <div class="row elements-wrap">
-        <div id="beachHeader" class="col-12">
-            <header class="entry-header elements-heading">
-                <h2 class="entry-title">Leyton Beach</h2>
-            </header>
-        </div>
-    </div>
-</div>
-<br />
 
-<div class="short-content-wrap">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="short-content">
-                    <h3 class="entry-title">Opening Times & Bookings</h3>
 
-                    <p id="short-content1"></p>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="short-content">
-                    <h3 class="entry-title">Rates & Payment</h3>
-
-                    <p id="short-content2"></p>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="short-content">
-                    <h3 class="entry-title">Address & Directions</h3>
-
-                    <p id="short-content3"></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="container">
     <div class="row">
-        <div class="col-12" style="padding: 0;">
-            <div id="venue" style="overflow: scroll;">
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row elements-wrap">
         <div class="col-12">
-            <header class="entry-header elements-heading">
-                <h2 id="locationHeader" class="entry-title">Leyton Beach</h2>
-            </header>
-        </div>
-    </div>
-</div>
-<br />
-
-<!-- <div  style="width: 100%"> -->
-    <div class="contact-page-wrap">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div id="google-map" class="contact-gmap">
-                    </div>
+            <!-- table1 -->
+            <div class="table100 ver2 m-b-110">
+                <div class="table100-head">
+                    <table>
+                        <thead>
+                            <tr class="row100 head">
+                                <th class="cell100 column1">April</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table100-body js-pscroll">
+                    <table>
+                        <tbody>
+                            <tr class="row100 body">
+                                <td class="cell100 column1">Discounted open play sessions (from £10 to £5 per session)</td>
+                            </tr>
+                            <tr class="row100 body">
+                                <td class="cell100 column1">Discounted All-You-Can-Play days (from £10 to £5 per session)</td>
+                            </tr>
+                            <tr class="row100 body">
+                                <td class="cell100 column1">Discounted court hire at Sideout Beach (from £20 to £15 per session)</td>
+                            </tr>
+                            <tr class="row100 body">
+                                <td class="cell100 column1">Access to all SideOut Beach Volleyball Club tournaments</td>
+                            </tr>
+                            <tr class="row100 body">
+                                <td class="cell100 column1">Access to SideOut Beach Volleyball Club training sessions</td>
+                            </tr>
+                            <tr class="row100 body">
+                                <td class="cell100 column1">Insurance coverage (via club's private policy and via club's membership of Volleyball of England)</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
+
+            <!-- table2 -->
+            <div class="table100 ver2 m-b-110">
+                <div class="table100-head">
+                    <table>
+                        <thead>
+                            <tr class="row100 head">
+                                <th class="cell100 column1">Date</th>
+                                <th class="cell100 column2">Tournament</th>
+                                <th class="cell100 column3">Open Group Training</th>
+                                <th class="cell100 column4">Private Group Training</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table100-body js-pscroll">
+                    <table>
+                        <tbody>
+                            <tr class="row100 body">
+                                <td class="cell100 column1">Free daily Open Play (not coached) sessions</td>
+                                <td class="cell50 column2">&#10004;</td>
+                                <td class="cell50 column3">&#10004;</td>
+                                <td class="cell50 column4">&#10004;</td>
+                            </tr>
+                            <tr class="row100 body">
+                                <td class="cell100 column1">2 coached training sessions per week</td>
+                                <td class="cell50 column2">&#10008;</td>
+                                <td class="cell50 column3">&#10004;</td>
+                                <td class="cell50 column4">&#10004;</td>
+                            </tr>
+                            <tr class="row100 body">
+                                <td class="cell100 column1">Register as</td>
+                                <td class="cell50 column2">Individual</td>
+                                <td class="cell50 column3">Individual</td>
+                                <td class="cell50 column4">Group (max.8)</td>
+                            </tr>
+                            <tr class="row100 body">
+                                <td class="cell100 column1">Maximum players per training group</td>
+                                <td class="cell50 column2">n/a</td>
+                                <td class="cell50 column3">10</td>
+                                <td class="cell50 column4">8</td>
+                            </tr>
+                            <tr class="row100 body">
+                                <td class="cell100 column1">Option to pay in instalments</td>
+                                <td class="cell50 column2">&#10008;</td>
+                                <td class="cell50 column3">&#10004;</td>
+                                <td class="cell50 column4">&#10004;</td>
+                            </tr>
+                            <tr class="row100 body">
+                                <td class="cell100 column1">SideOut Beach Volleyball Club t-shirt</td>
+                                <td class="cell50 column2">&#10004;</td>
+                                <td class="cell50 column3">&#10004;</td>
+                                <td class="cell50 column4">&#10004;</td>
+                            </tr>
+                            <tr class="row100 body">
+                                <td class="cell100 column1">Price</td>
+
+                                <td class="cell50 column2">£65 per person</td>
+                                <td class="cell50 column3">£230 per person</td>
+                                <td class="cell50 column4">£2000 per group</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>  
+            <!--  end of table2 -->
         </div>
     </div>
-<!-- </div> -->
-<br />
+</div>
+
+
+
+
+
 
     <footer class="site-footer">
         <div class="footer-widgets">
@@ -305,17 +289,12 @@
         <script type='text/javascript' src='js/jquery.js'></script>
         <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
         <script type='text/javascript' src='js/swiper.min.js'></script>
-        
         <script type='text/javascript' src='js/hider.js'></script>
         <script type='text/javascript' src='js/jquery.countdown.min.js'></script>
         <script type='text/javascript' src='js/circle-progress.min.js'></script>
         <script type='text/javascript' src='js/jquery.countTo.min.js'></script>
         <script type='text/javascript' src='js/jquery.barfiller.js'></script>
         <script type='text/javascript' src='js/custom.js'></script>
-
-        <script type="text/javascript">
-            appender('leytonBooking')
-        </script>
 
     </body>
     </html>

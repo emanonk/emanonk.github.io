@@ -175,6 +175,19 @@ th, td {
   padding-right: 10px;
 }
 
+.columnDay {
+  width: 15%;
+}
+
+.column1X {
+  width: 20%;
+  padding-left: 40px;
+}
+
+.columnX {
+  width: 25%;
+}
+
 .column1 {
   width: 33%;
   padding-left: 40px;
@@ -221,8 +234,10 @@ th, td {
 }
 
 .table100-body {
+  /*
   max-height: 585px;
-  overflow: auto;
+  overflow: auto; */
+  overflow: visible;
 }
 
 
