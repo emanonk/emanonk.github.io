@@ -17,6 +17,8 @@ var shortContent3 = document.getElementById('short-content3')
 var beachTitle = document.getElementById('beachHeader')
 var locationHeader = document.getElementById('locationHeader')
 var map = document.getElementById('google-map')
+var leytonBut = document.getElementById('leytonButton')
+var worthingBut = document.getElementById('worthingButton')
 
 var part1 = '<div id="venueBooking" style="top:;bottom:;left:;right:;height:1200px;position:" class="htco1" data-state="hasContent" id="HtmlCmpnnt0-apz">\
   <div id="HtmlCmpnnt0-apziFrameHolder" class="htco1iFrameHolder">\
@@ -42,10 +44,24 @@ Members\' rate: £16 per hour (maximum of 8 people per court). Available only to
 Payment: We only accept payment through PayPal, which offers maximum flexibility and ensures that your payments are secure! No additional charges apply and you do not need a PayPal account to make payment.'
 
 var shortContentLeyton3 = '\
-Public Transport: Access is via Ive Farm Close, E10 5HQ. This is a 20-minute walk from Leyton underground station or a 15-minute walk from Leyton Midland Road overground station\
-<br /><br />\
+Public Transport: Access is via Ive Farm Close, E10 5HQ:\
+<br>\
+-20-minute walk from Leyton tube station\
+<br>\
+-15-minute walk from Leyton Midland Road overground station\
+<br>\
+-Short bus ride from Leyton tube station to \'Villiers Close\' bus stop which is a 3-minute walk to the venue:\
+\
+bus 158 (every 7-10 mins); or \
+\
+bus 58 (every 10-14 mins).\
+\
+<br><br>\
 Driving: The venue car park can be accessed only from Orient Way. There is no postcode for this location yet, so please use the following on your SatNav: 51°33\'39.7"N 0°01\'18.0"W  or  51.561022, -0.021670.'
 
+//Public Transport: Access is via Ive Farm Close, E10 5HQ. This is a 20-minute walk from Leyton underground station or a 15-minute walk from Leyton Midland Road overground station\
+//<br /><br />\
+//Driving: The venue car park can be accessed only from Orient Way. There is no postcode for this location yet, so please use the following on your SatNav: 51°33\'39.7"N 0°01\'18.0"W  or  51.561022, -0.021670.'
 var shortContentWorthing1 = '\
 From 1 April to 30 September, our courts are available to book between 10:00am and 10:00pm on weekdays. Weekend bookings are not available.\
 <br /><br />\
@@ -70,13 +86,15 @@ Driving or public transport: Access is via Brighton Road (A259).\
 Cycling or walking: You can also access us via Beach Parade, the Worthing seafront promenade.'
 
 
-var beachTitleLeyton = '<header class="entry-header elements-heading"><h2 class="entry-title">Leyton Beach</h2></header>'
+var beachTitleLeyton = 'Leyton Beach'
 
-var beachTitleWorthing = '<header class="entry-header elements-heading"><h2 class="entry-title">Worthing Beach</h2></header>'
+var beachTitleWorthing = 'Worthing Beach'
 
 var link = '';
 if( venue == 'leytonBooking'){
   beachTitle.innerHTML = beachTitleLeyton
+  leytonBut.innerHTML = '<a id="leytonButton" href="#" onclick="appender(\'leytonBooking\')" class="btn red-border">Book a court</a>'
+  worthingBut.innerHTML = '<a id="worthingButton" href="#" onclick="appender(\'worthingBooking\')" class="btn gradient-bg mr-2">Book a court</a>'
   locationHeader.innerHTML = 'Leyton Beach Location'
   link= 'src="https://www-sideout-co-uk.filesusr.com/html/a1273a_8b9c89bc80e83f8ae0363b4d501a0396.html"';
   shortContent1.innerHTML = shortContentLeyton1;
@@ -85,6 +103,8 @@ if( venue == 'leytonBooking'){
   map.innerHTML = mapLeyton;
 }else{
   beachTitle.innerHTML = beachTitleWorthing
+  worthingBut.innerHTML = '<a id="worthingButton" href="#" onclick="appender(\'worthingBooking\')" class="btn gradient-bg mr-2">Book a court</a>'
+  leytonBut.innerHTML = '<a id="leytonButton" href="#" onclick="appender(\'leytonBooking\')" class="btn red-border">Book a court</a>'
   locationHeader.innerHTML = 'Worthing Beach Location'
   link = 'src="https://www-sideout-co-uk.filesusr.com/html/a1273a_31379c57d27a21ec3f54f346939fc991.html"';
   shortContent1.innerHTML = shortContentWorthing1;

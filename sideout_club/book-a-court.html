@@ -50,7 +50,7 @@
                             <li><a href="index.html">Home</a></li>
                             <li><a href="membership.html">Membership</a></li>
                             <li class="current-menu-item"><a href="book-a-court.html">Book a court</a></li>
-                            <li><a href="calendar-leyton.html">Calendar</a></li>
+                            <li><a href="calendar-leyton.html">Event Calendar</a></li>
                             <li><a href="tournaments.html">Tournaments</a></li>
                             <li><a href="camps-and-clinics.html">Camps & Clinics</a></li>
                             <li><a href="meet-the-team.html">Meet the Team</a></li>
@@ -83,7 +83,9 @@
 
         <div class="row">
             <div class="col-12 col-lg-6">
-                <div class="cause-wrap d-flex flex-wrap justify-content-between">
+                <div class="cause-wrap myactive d-flex flex-wrap justify-content-between">
+                <!-- <div class="cause-wrap myactive d-flex flex-wrap justify-content-between"> -->
+                    
                     <figure class="m-0">
                         <img src="images/featured-causes.jpg" alt="">
                     </figure>
@@ -97,7 +99,7 @@
                             <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris. Lorem ipsum dolor sit amet, consectetur.</p>
                         </div><!-- .entry-content -->
 
-                        <div class="entry-footer mt-5">
+                        <div id="leytonButton" class="entry-footer mt-5">
                             <a href="#" onclick="appender('leytonBooking')" class="btn gradient-bg mr-2">Book a court</a>
                         </div><!-- .entry-footer -->
                     </div><!-- .cause-content-wrap -->
@@ -123,8 +125,8 @@
                             <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris. Lorem ipsum dolor sit amet, consectetur.</p>
                         </div><!-- .entry-content -->
 
-                        <div class="entry-footer mt-5">
-                            <a href="#" onclick="appender('worthingBooking')" class="btn gradient-bg mr-2">Book a court</a>
+                        <div id="worthingButton"class="entry-footer mt-5">
+                            <a href="#" onclick="appender('worthingBooking')" class="btn red-border">Book a court</a>
                         </div><!-- .entry-footer -->
                     </div><!-- .cause-content-wrap -->
 
@@ -135,7 +137,20 @@
     </div><!-- .container -->
 </div><!-- .featured-cause -->
 
+
+<!-- <div class="featured-cause"> -->
+    <br><br>
 <div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="section-heading">
+                <h2 id="beachHeader" class="entry-title">Leyton Beach</h2>
+            </div><!-- .section-heading -->
+        </div><!-- .col -->
+    </div><!-- .row -->
+</div>
+<!-- </div> -->
+<!-- <div class="container">
     <div class="row elements-wrap">
         <div id="beachHeader" class="col-12">
             <header class="entry-header elements-heading">
@@ -143,7 +158,7 @@
             </header>
         </div>
     </div>
-</div>
+</div> -->
 <br />
 
 <div class="short-content-wrap">

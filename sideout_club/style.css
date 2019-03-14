@@ -437,6 +437,9 @@ a:hover, a:active {
     border-color: #ff5a00;
 }
 
+.btn.red-border {
+    border-color: #ff0000;
+}
 .btn.orange-border:hover,
 .btn.gradient-bg {
     border-color: transparent;
@@ -920,6 +923,11 @@ ul.tabs-nav .tab-nav.active {
     padding: 40px 24px;
     background: #edf3f5;
 }
+
+/*.featured-cause .myactive {
+    padding: 40px 24px;
+    background: #ad5050;
+}*/
 
 .featured-cause .featured-cause .cause-wrap figure {
     width: 246px;
