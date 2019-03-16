@@ -93,8 +93,8 @@ var beachTitleWorthing = 'Worthing Beach'
 var link = '';
 if( venue == 'leytonBooking'){
   beachTitle.innerHTML = beachTitleLeyton
-  leytonBut.innerHTML = '<a id="leytonButton" href="#" onclick="appender(\'leytonBooking\')" class="btn red-border">Book a court</a>'
-  worthingBut.innerHTML = '<a id="worthingButton" href="#" onclick="appender(\'worthingBooking\')" class="btn gradient-bg mr-2">Book a court</a>'
+  leytonBut.innerHTML = '<a id="leytonButton" href="#" onclick="appender(\'leytonBooking\')" class="btn gradient-bg mr-2">Book a court</a>'
+  worthingBut.innerHTML = '<a id="worthingButton" href="#" onclick="appender(\'worthingBooking\')" class="btn red-border">Book a court</a>'
   locationHeader.innerHTML = 'Leyton Beach Location'
   link= 'src="https://www-sideout-co-uk.filesusr.com/html/a1273a_8b9c89bc80e83f8ae0363b4d501a0396.html"';
   shortContent1.innerHTML = shortContentLeyton1;
