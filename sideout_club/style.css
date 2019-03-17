@@ -398,7 +398,7 @@ a:hover, a:active {
 # Elements Page
 --------------------------------------------------------------*/
 .elements-wrap {
-    margin-top: 80px;
+    margin-top: 10px;
 }
 
 .elements-page .elements-heading .entry-title {
@@ -1402,7 +1402,7 @@ ul.tabs-nav .tab-nav.active {
 # Short Content
 --------------------------------*/
 .short-content-wrap {
-    padding-bottom: 96px;
+    padding-bottom: 20px;
 }
 
 .short-content .entry-title {
