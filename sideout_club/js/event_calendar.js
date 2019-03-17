@@ -30,12 +30,12 @@ const TYPE_TRAINING = "Training";
 
 //EVENT LINKS
 const URL_AYCP = "all-you-can-play.html";
-const URL_SPRING = "spring-tourney.html";
-const URL_SUMMER = "summer-series.html";
-const URL_ALL_NATIONS = "all-nations.html";
+const URL_SPRING = "tournament-spring-tourney.html";
+const URL_SUMMER = "tournament-summer-series.html";
+const URL_ALL_NATIONS = "tournament-all-nations.html";
 const URL_CEV = "cev-continental-cup.html";
-const URL_CHALLENGER = "challenger-series.html";
-const URL_GRAND_PRIX = "grand-prix.html";
+const URL_CHALLENGER = "tournament-challenger-series.html";
+const URL_GRAND_PRIX = "tournament-grand-prix.html";
 const URL_LONDON_FINALS = "london-finals.html";
 const URL_TRAINING = "membership.html"
 
@@ -55,7 +55,7 @@ var gsDayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   
 var april_events_leyton = [
-	{date: new Date("04/06/2019"), name: NAME_AYCP, type: TYPE_PLAY, info: "", url:URL_AYCP},
+	{date: new Date("04/06/2019"), name: NAME_AYCP, type: TYPE_PLAY, info: "10.30am - 7:30pm, all levels are welcome!", url:URL_AYCP},
 	{date: new Date("04/07/2019"), name: NAME_AYCP, type: TYPE_PLAY, info: "", url:URL_AYCP},
 	{date: new Date("04/08/2019"), name: NAME_TRAINING, type: TYPE_TRAINING, info: "", url:URL_TRAINING},
 	{date: new Date("04/09/2019"), name: NAME_TRAINING, type: TYPE_TRAINING, info: "", url:URL_TRAINING},
@@ -415,8 +415,8 @@ var september_events_worthing = [
 //   return new Date(year, month, 0).getDate();
 // }
 
-function renderApril(eventList, elementId, filter, dateCheck){
-	//console.log("RENDER APRIL");
+function renderMonthTable(eventList, elementId, filter, dateCheck){
+	//console.log(eventList);
 	var i;
 	var text = "";
 	
@@ -425,12 +425,10 @@ function renderApril(eventList, elementId, filter, dateCheck){
 		var eventType = eventList[i].type;
 
 		if(filter=='display-all' || filter==eventType){
-
 		
 		var eventName = eventList[i].name;
 		var eventInfo = eventList[i].info;
 		var eventUrl = eventList[i].url;
-
 
 		//dateCheck here if is in the future
 		var dayOfWeekInt = eventList[i].date.getDay();
@@ -450,9 +448,21 @@ function renderApril(eventList, elementId, filter, dateCheck){
     		case NAME_SUMMER:
     			color = COLOR_SUMMER;
     			break;
-			case NAME_END_OF_SEASON_PARTY:
-				color = COLOR_NAME_END_OF_SEASON_PARTY;
-				break;
+			case NAME_ALL_NATIONS:
+    			color = COLOR_ALL_NATIONS;
+    			break;
+			case NAME_CHALLENGER:
+    			color = COLOR_CHALLENGER;
+    			break;
+			case NAME_GRAND_PRIX:
+    			color = COLOR_GRAND_PRIX;
+    			break;
+    		case NAME_LONDON_FINALS:
+    			color = COLOR_LONDON_FINALS;
+    			break;
+    		case NAME_CEV:
+    			color = COLOR_CEV;
+    			break;
   			default:
     			color = COLOR_DEFAULT;
 		}
@@ -479,9 +489,6 @@ var buttonPlay = "btn red-border";
 var buttonTraining = "btn red-border";
 
 	switch(filter) {
-  			// case 'display-all':
-    	// 		color = COLOR_AYCP;
-    	// 		break;
   			case TYPE_TOURNAMENT:
     			buttonTournament = "btn gradient-bg";
     			break;
@@ -510,34 +517,19 @@ function eventController(filter){
 	var isleyton = url.includes("calendar-leyton");//calendar-worthing
 	
 	if(isleyton){
-		renderApril(april_events_leyton,'april-table', filter,'');
-		renderApril(may_events_leyton,'may-table', filter,'');	
-		renderApril(june_events_leyton,'june-table', filter,'');	
-		renderApril(july_events_leyton,'july-table', filter,'');	
-		renderApril(august_events_leyton,'august-table', filter,'');	
-		renderApril(september_events_leyton,'september-table', filter,'');	
+		renderMonthTable(april_events_leyton,'april-table', filter,'');
+		renderMonthTable(may_events_leyton,'may-table', filter,'');	
+		renderMonthTable(june_events_leyton,'june-table', filter,'');	
+		renderMonthTable(july_events_leyton,'july-table', filter,'');	
+		renderMonthTable(august_events_leyton,'august-table', filter,'');	
+		renderMonthTable(september_events_leyton,'september-table', filter,'');	
 	}else {
-		renderApril(april_events_worthing,'april-table', filter,'');
-		renderApril(may_events_worthing,'may-table', filter,'');	
-		renderApril(june_events_worthing,'june-table', filter,'');	
-		renderApril(july_events_worthing,'july-table', filter,'');	
-		renderApril(august_events_worthing,'august-table', filter,'');	
-		renderApril(september_events_worthing,'september-table', filter,'');
+		renderMonthTable(april_events_worthing,'april-table', filter,'');
+		renderMonthTable(may_events_worthing,'may-table', filter,'');	
+		renderMonthTable(june_events_worthing,'june-table', filter,'');	
+		renderMonthTable(july_events_worthing,'july-table', filter,'');	
+		renderMonthTable(august_events_worthing,'august-table', filter,'');	
+		renderMonthTable(september_events_worthing,'september-table', filter,'');
 	}
-
-	//console.log(isleyton);
-
-	
-	
-
-	
 }
-
-// document.getElementById("display-all").onclick = eventController('all');
-// document.getElementById("display-tournament").onclick = eventController(TYPE_TOURNAMENT);
-// document.getElementById("display-play").onclick = eventController(TYPE_PLAY);
-// document.getElementById("display-training").onclick = eventController(TYPE_TRAINING);
 eventController('display-all');
-
-
-
