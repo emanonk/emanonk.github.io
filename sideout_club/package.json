@@ -1,0 +1,21 @@
+{
+  "name": "sideout_club",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "sideout_club": "calendar.js"
+  },
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "rm -rf .cache dist && parcel build src/index.html"
+  },
+  "author": "Manos Kammas <manos.kammas@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^1.12.2"
+  },
+  "alias": {
+    "jquery": "./src/js/jquery.js"
+  }
+}
