@@ -26,15 +26,16 @@ var part1 = '<div id="venueBooking" style="top:;bottom:;left:;right:;height:1200
 
 var part2 = '></iframe></div></div>';
 
-var mapLeyton = '<iframe width="100%" height="600" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord=51.5630325,-0.01934853&amp;q=E10%205HQ+(Sideout%20Beach)&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/map-my-route/">Create a route on google maps</a></iframe>';
+var mapLeyton = '<iframe width="100%" height="600" src="https://maps.google.com/maps?q=E10%205HQ&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/map-my-route/">Create a route on google maps</a></iframe>';
 var mapWorthing = '<iframe width="100%" height="600" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=BN11%202FG+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/map-my-route/">Draw map route</a></iframe>';
 
 var shortContentLeyton1 = '\
-From 1 April to 30 September, our courts are available to book between 10:00am and 10:00pm on weekdays. Weekend bookings are not available.\
-<br /><br />\
-​Courts can be booked up to 30 days in advance.\
-<br /><br />\
-For any block bookings beyond 30 days, corporate bookings or other private events, please feel free to contact us via the form at the bottom of this page!'
+Prior to 1 April, our courts are available between 10:00am and 9:30pm on weekdays and 10:00am and 4:30pm on weekends.\
+<br><br>\
+From 1 April to 30 September, our courts are available to book between 10:00am and 10:00pm on weekdays. Weekend bookings are not available, as we run different events each weekend. Check out the events calendar here!\
+<br><br>\
+Courts can be booked up to 30 days in advance. For any block bookings beyond 30 days, corporate bookings or other private events, please feel free to contact us via the form at the bottom of this page!'
+
 
 var shortContentLeyton2 = '\
 Standard rate:  £21 per hour (maximum of 8 people per court)\
@@ -63,11 +64,10 @@ Driving: The venue car park can be accessed only from Orient Way. There is no po
 //<br /><br />\
 //Driving: The venue car park can be accessed only from Orient Way. There is no postcode for this location yet, so please use the following on your SatNav: 51°33\'39.7"N 0°01\'18.0"W  or  51.561022, -0.021670.'
 var shortContentWorthing1 = '\
-From 1 April to 30 September, our courts are available to book between 10:00am and 10:00pm on weekdays. Weekend bookings are not available.\
-<br /><br />\
-​Courts can be booked up to 30 days in advance.\
-<br /><br />\
-For any block bookings beyond 30 days, corporate bookings or other private events, please feel free to contact us via the form at the bottom of this page!'
+From 1 April to 30 September, our courts will be available to book between 10:00am and 10:00pm on weekdays. Weekend bookings are not available, as we run different events each weekend. Check out the events calendar here!\
+<br><br>\
+​Courts can be booked up to 30 days in advance. For any block bookings beyond 30 days, corporate bookings or other private events, please feel free to contact us via the form at the bottom of this page!'
+
 
 
 var shortContentWorthing2 = '\
@@ -86,15 +86,15 @@ Driving or public transport: Access is via Brighton Road (A259).\
 Cycling or walking: You can also access us via Beach Parade, the Worthing seafront promenade.'
 
 
-var beachTitleLeyton = 'Leyton Beach'
+var beachTitleLeyton = 'SideOut Beach, Leyton (London)'
 
-var beachTitleWorthing = 'Worthing Beach'
+var beachTitleWorthing = 'SideOut Beach, Worthing (Sussex)'
 
 var link = '';
 if( venue == 'leytonBooking'){
   beachTitle.innerHTML = beachTitleLeyton
-  leytonBut.innerHTML = '<a id="leytonButton" href="#" onclick="appender(\'leytonBooking\')" class="btn gradient-bg mr-2">Book a court</a>'
-  worthingBut.innerHTML = '<a id="worthingButton" href="#" onclick="appender(\'worthingBooking\')" class="btn red-border">Book a court</a>'
+  leytonBut.innerHTML = '<a id="leytonButton" href="#" onclick="appender(\'leytonBooking\')" class="btn gradient-bg mr-2">Book a court here</a>'
+  worthingBut.innerHTML = '<a id="worthingButton" href="#" onclick="appender(\'worthingBooking\')" class="btn red-border">Book a court here</a>'
   locationHeader.innerHTML = 'Leyton Beach Location'
   link= 'src="https://www-sideout-co-uk.filesusr.com/html/a1273a_8b9c89bc80e83f8ae0363b4d501a0396.html"';
   shortContent1.innerHTML = shortContentLeyton1;

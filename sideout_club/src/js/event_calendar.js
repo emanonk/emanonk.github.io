@@ -13,6 +13,7 @@ const MIXED = "Mixed";
 
 //TOURNAMENT NAMEs
 const NAME_AYCP = "All You Can Play";
+const NAME_OPEN_PLAY = "Open Play"
 const NAME_SPRING = "SideOut Spring Tourney";
 const NAME_SUMMER = "SideOut Summer Series";
 const NAME_ALL_NATIONS = "All Nations";
@@ -39,6 +40,8 @@ const URL_GRAND_PRIX = "tournament-grand-prix.html";
 const URL_LONDON_FINALS = "london-finals.html";
 const URL_TRAINING = "membership.html"
 
+//INFO
+const INFO_OPEN_PLAY = "18:00-22:00, £10 per person (£5 for Club members, FREE with Social, Open Group or Private Group add-on), No need to register"
 
 //TOURNAMENT COLORS
 const COLOR_AYCP          = "#1d29e4";
@@ -57,17 +60,17 @@ var months = ["January", "February", "March", "April", "May", "June", "July", "A
 var april_events_leyton = [
 	{date: new Date("04/06/2019"), name: NAME_AYCP, type: TYPE_PLAY, info: "10.30am - 7:30pm, all levels are welcome!", url:URL_AYCP},
 	{date: new Date("04/07/2019"), name: NAME_AYCP, type: TYPE_PLAY, info: "", url:URL_AYCP},
-	{date: new Date("04/08/2019"), name: NAME_TRAINING, type: TYPE_TRAINING, info: "", url:URL_TRAINING},
-	{date: new Date("04/09/2019"), name: NAME_TRAINING, type: TYPE_TRAINING, info: "", url:URL_TRAINING},
-	{date: new Date("04/10/2019"), name: NAME_TRAINING, type: TYPE_TRAINING, info: "", url:URL_TRAINING},
-	{date: new Date("04/11/2019"), name: NAME_TRAINING, type: TYPE_TRAINING, info: "", url:URL_TRAINING},
-	{date: new Date("04/12/2019"), name: NAME_TRAINING, type: TYPE_TRAINING, info: "", url:URL_TRAINING},
+	{date: new Date("04/08/2019"), name: NAME_OPEN_PLAY, type: TYPE_PLAY, info: INFO_OPEN_PLAY, url:"#"},
+	{date: new Date("04/09/2019"), name: NAME_OPEN_PLAY, type: TYPE_PLAY, info: INFO_OPEN_PLAY, url:"#"},
+	{date: new Date("04/10/2019"), name: NAME_OPEN_PLAY, type: TYPE_PLAY, info: INFO_OPEN_PLAY, url:"#"},
+	{date: new Date("04/11/2019"), name: NAME_OPEN_PLAY, type: TYPE_PLAY, info: INFO_OPEN_PLAY, url:"#"},
+	{date: new Date("04/12/2019"), name: NAME_OPEN_PLAY, type: TYPE_PLAY, info: INFO_OPEN_PLAY, url:"#"},
 	{date: new Date("04/13/2019"), name: NAME_AYCP, type: TYPE_PLAY, info: "", url:URL_AYCP},
 	{date: new Date("04/14/2019"), name: NAME_AYCP, type: TYPE_PLAY, info: "", url:URL_AYCP},
-	{date: new Date("04/15/2019"), name: NAME_TRAINING, type: TYPE_TRAINING, info: "", url:URL_TRAINING},
-	{date: new Date("04/16/2019"), name: NAME_TRAINING, type: TYPE_TRAINING, info: "", url:URL_TRAINING},
-	{date: new Date("04/17/2019"), name: NAME_TRAINING, type: TYPE_TRAINING, info: "", url:URL_TRAINING},
-	{date: new Date("04/18/2019"), name: NAME_TRAINING, type: TYPE_TRAINING, info: "", url:URL_TRAINING},
+	{date: new Date("04/15/2019"), name: NAME_OPEN_PLAY, type: TYPE_PLAY, info: INFO_OPEN_PLAY, url:"#"},
+	{date: new Date("04/16/2019"), name: NAME_OPEN_PLAY, type: TYPE_PLAY, info: INFO_OPEN_PLAY, url:"#"},
+	{date: new Date("04/17/2019"), name: NAME_OPEN_PLAY, type: TYPE_PLAY, info: INFO_OPEN_PLAY, url:"#"},
+	{date: new Date("04/18/2019"), name: NAME_OPEN_PLAY, type: TYPE_PLAY, info: INFO_OPEN_PLAY, url:"#"},
 	{date: new Date("04/19/2019"), name: NAME_AYCP, type: TYPE_PLAY, info: "", url:URL_AYCP},
 	{date: new Date("04/20/2019"), name: NAME_AYCP, type: TYPE_PLAY, info: "", url:URL_AYCP},
 	{date: new Date("04/21/2019"), name: NAME_AYCP, type: TYPE_PLAY, info: "", url:URL_AYCP},
@@ -240,17 +243,17 @@ var september_events_leyton = [
 var april_events_worthing = [
 	{date: new Date("04/06/2019"), name: "Official Opening. Free play, all day!", type: TYPE_PLAY, info:"", url:""},
 	{date: new Date("04/07/2019"), name: NAME_AYCP, type: TYPE_PLAY, info: "", url:URL_AYCP},
-	{date: new Date("04/08/2019"), name: NAME_TRAINING, type: TYPE_TRAINING, info: "", url:URL_TRAINING},
-	{date: new Date("04/09/2019"), name: NAME_TRAINING, type: TYPE_TRAINING, info: "", url:URL_TRAINING},
-	{date: new Date("04/10/2019"), name: NAME_TRAINING, type: TYPE_TRAINING, info: "", url:URL_TRAINING},
-	{date: new Date("04/11/2019"), name: NAME_TRAINING, type: TYPE_TRAINING, info: "", url:URL_TRAINING},
-	{date: new Date("04/12/2019"), name: NAME_TRAINING, type: TYPE_TRAINING, info: "", url:URL_TRAINING},
+	{date: new Date("04/08/2019"), name: NAME_OPEN_PLAY, type: TYPE_PLAY, info: INFO_OPEN_PLAY, url:"#"},
+	{date: new Date("04/09/2019"), name: NAME_OPEN_PLAY, type: TYPE_PLAY, info: INFO_OPEN_PLAY, url:"#"},
+	{date: new Date("04/10/2019"), name: NAME_OPEN_PLAY, type: TYPE_PLAY, info: INFO_OPEN_PLAY, url:"#"},
+	{date: new Date("04/11/2019"), name: NAME_OPEN_PLAY, type: TYPE_PLAY, info: INFO_OPEN_PLAY, url:"#"},
+	{date: new Date("04/12/2019"), name: NAME_OPEN_PLAY, type: TYPE_PLAY, info: INFO_OPEN_PLAY, url:"#"},
 	{date: new Date("04/13/2019"), name: NAME_AYCP, type: TYPE_PLAY, info: "", url:URL_AYCP},
 	{date: new Date("04/14/2019"), name: NAME_AYCP, type: TYPE_PLAY, info: "", url:URL_AYCP},
-	{date: new Date("04/15/2019"), name: NAME_TRAINING, type: TYPE_TRAINING, info: "", url:URL_TRAINING},
-	{date: new Date("04/16/2019"), name: NAME_TRAINING, type: TYPE_TRAINING, info: "", url:URL_TRAINING},
-	{date: new Date("04/17/2019"), name: NAME_TRAINING, type: TYPE_TRAINING, info: "", url:URL_TRAINING},
-	{date: new Date("04/18/2019"), name: NAME_TRAINING, type: TYPE_TRAINING, info: "", url:URL_TRAINING},
+	{date: new Date("04/15/2019"), name: NAME_OPEN_PLAY, type: TYPE_PLAY, info: INFO_OPEN_PLAY, url:"#"},
+	{date: new Date("04/16/2019"), name: NAME_OPEN_PLAY, type: TYPE_PLAY, info: INFO_OPEN_PLAY, url:"#"},
+	{date: new Date("04/17/2019"), name: NAME_OPEN_PLAY, type: TYPE_PLAY, info: INFO_OPEN_PLAY, url:"#"},
+	{date: new Date("04/18/2019"), name: NAME_OPEN_PLAY, type: TYPE_PLAY, info: INFO_OPEN_PLAY, url:"#"},
 	{date: new Date("04/19/2019"), name: NAME_AYCP, type: TYPE_PLAY, info: "", url:URL_AYCP},
 	{date: new Date("04/20/2019"), name: "Private bookings", type: "-", info: "", url:""},
 	{date: new Date("04/21/2019"), name: "Private bookings", type: "-", info: "", url:""},

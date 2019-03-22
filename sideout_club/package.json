@@ -1,0 +1,15 @@
+{
+  "name": "sideout_club",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "deploy": "surge src sideout.club"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "surge": "^0.20.3"
+  }
+}
