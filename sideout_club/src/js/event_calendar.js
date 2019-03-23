@@ -414,6 +414,19 @@ var september_events_worthing = [
 	{date: new Date("09/28/2019"), name: NAME_AYCP, type: TYPE_PLAY, info: "", url:URL_AYCP},
 	{date: new Date("09/29/2019"), name: NAME_END_OF_SEASON_PARTY, type: "", info: "", url:""}
 ];
+
+
+const TABLE_HEADER = 
+'<table>\
+	<thead>\
+		<tr class="row100 head">\
+			<th class="cell100 column1X">Date</th>\
+			<th class="cell100 columnX">Event Name</th>\
+			<th class="cell100 columnX">Event Type</th>\
+			<th class="cell100 columnX">Info</th>\
+		</tr>\
+	</thead>\
+</table>'
 // function daysInMonth(month,year) {
 //   return new Date(year, month, 0).getDate();
 // }
@@ -518,6 +531,14 @@ function eventController(filter){
 	filterButtons(filter);
 	var url = window.location.href;
 	var isleyton = url.includes("calendar-leyton");//calendar-worthing
+
+
+	document.getElementById('table-header-april').innerHTML = TABLE_HEADER;
+	document.getElementById('table-header-may').innerHTML = TABLE_HEADER;
+	document.getElementById('table-header-june').innerHTML = TABLE_HEADER;
+	document.getElementById('table-header-july').innerHTML = TABLE_HEADER;
+	document.getElementById('table-header-august').innerHTML = TABLE_HEADER;
+	document.getElementById('table-header-september').innerHTML = TABLE_HEADER;
 	
 	if(isleyton){
 		renderMonthTable(april_events_leyton,'april-table', filter,'');
