@@ -738,7 +738,7 @@ ul.tabs-nav .tab-nav.active {
     font-weight: 500;
     line-height: 1;
     text-align: center;
-    background: #ff5a00;
+    background: #ff0000;
     color: #fff;
 }
 
@@ -779,7 +779,7 @@ ul.tabs-nav .tab-nav.active {
     padding-bottom: 24px;
     font-size: 36px;
     font-weight: 600;
-    color: #ff5a00;
+    color: #ff0000;
 }
 
 .welcome-content .entry-title::before {
@@ -790,7 +790,7 @@ ul.tabs-nav .tab-nav.active {
     width: 64px;
     height: 4px;
     border-radius: 2px;
-    background: #ff5a00;
+    background: #ff0000;
 }
 
 .welcome-content .entry-content {
@@ -997,7 +997,7 @@ ul.tabs-nav .tab-nav.active {
 .our-causes {
     position: relative;
     padding: 96px 0;
-    background: url("images/cause-bg.jpg") no-repeat center;
+    background: url("images/Tournaments-Spring series 2.jpg") no-repeat center;
     background-size: cover;
     z-index: 99;
 }

@@ -25,50 +25,16 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
+    <script type='text/javascript' src='js/mainMenu.js'></script>
 </head>
 
 <body>
     <header class="site-header">
-        <div class="nav-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
-                        <div class="site-branding d-flex align-items-center">
-                            <a class="d-block" href="index.html" rel="home"><img class="d-block" src="images/logo_3.png"
-                                    alt="logo"></a>
-                        </div><!-- .site-branding -->
-
-                        <nav class="site-navigation d-flex justify-content-end align-items-center">
-                            <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
-                                <li class="current-menu-item"><a href="index.html">Home</a></li>
-                                <li><a href="membership.html">Membership</a></li>
-                                <li><a href="book-a-court.html">Book a court</a></li>
-                                <li><a href="calendar-leyton.html">Event Calendar</a></li>
-                                <li><a href="tournaments.html">Tournaments</a></li>
-                                <li><a href="camps-and-clinics.html">Camps & Clinics</a></li>
-                                <li><a href="meet-the-team.html">Meet the Team</a></li>
-
-
-                                <!--  <li><a href="about.html">About us</a></li>
-                                <li><a href="causes.html">Causes</a></li>
-                                <li><a href="portfolio.html">Gallery</a></li>
-                                <li><a href="news.html">News</a></li>
-                                <li><a href="contact.html">Contact</a></li> -->
-                            </ul>
-                        </nav><!-- .site-navigation -->
-
-                        <div class="hamburger-menu d-lg-none">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div><!-- .hamburger-menu -->
-                    </div><!-- .col -->
-                </div><!-- .row -->
-            </div><!-- .container -->
-        </div><!-- .nav-bar -->
+        <div id="mainMenu" class="nav-bar">
+        </div>
     </header>
-    <!-- .site-header -->
+    <script type="text/javascript">renderMenu("index","");</script>
+    <!-- <br> -->
 
     <div class="swiper-container hero-slider">
         <div class="swiper-wrapper">
@@ -710,6 +676,9 @@
     <script type='text/javascript' src='js/jquery.barfiller.js'></script>
     <script type='text/javascript' src='js/custom.js'></script>
     <script type='text/javascript' src='js/footer.js'></script>
+    <script type="text/javascript">
+        renderFooter("")
+    </script>
 
 </body>
 

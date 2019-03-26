@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Sideout | Event Calendar Leyton</title>
+    <title>Sideout | Events Calendar Leyton</title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -28,43 +28,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/util.css">
     <link rel="stylesheet" href="css/main.css">
+    <script type='text/javascript' src='js/mainMenu.js'></script>
+    
 </head>
 
 <body>
     <header class="site-header">
-        <div class="nav-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
-                        <div class="site-branding d-flex align-items-center">
-                            <a class="d-block" href="index.html" rel="home"><img class="d-block" src="images/logo_3.png"
-                                    alt="logo"></a>
-                        </div><!-- .site-branding -->
-
-                        <nav class="site-navigation d-flex justify-content-end align-items-center">
-                            <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="membership.html">Membership</a></li>
-                                <li><a href="book-a-court.html">Book a court</a></li>
-                                <li class="current-menu-item"><a href="calendar-leyton.html">Event Calendar</a></li>
-                                <li><a href="tournaments.html">Tournaments</a></li>
-                                <li><a href="camps-and-clinics.html">Camps & Clinics</a></li>
-                                <li><a href="meet-the-team.html">Meet the Team</a></li>
-                            </ul>
-                        </nav><!-- .site-navigation -->
-
-                        <div class="hamburger-menu d-lg-none">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div><!-- .hamburger-menu -->
-                    </div><!-- .col -->
-                </div><!-- .row -->
-            </div><!-- .container -->
-        </div><!-- .nav-bar -->
-    </header><!-- .site-header -->
-    <br />
+        <div id="mainMenu" class="nav-bar">
+        </div>
+    </header>
+    <script type="text/javascript">renderMenu("calendar", "");</script>
+    <br>
 
     <div class="featured-cause">
         <div class="container">
@@ -77,22 +51,21 @@
             </div><!-- .row -->
         </div><!-- .container -->
     </div><!-- .featured-cause -->
-
+    <br>
 
     <div class="short-content-wrap">
         <div class="container">
-            <div class="row elements-wrap">
+            <div class="row">
+                <h3 class="entry-title">Get your diaries out!</h3>
+                <br><br>
+
                 <div class="col-12">
-                    <header class="entry-header elements-heading">
-                        <h2 class="entry-title">Filters</h2>
-                    </header>
                     <div class="entry-content elements-container">
                         <a href="calendar-leyton.html" class="btn gradient-bg">Leyton Beach Calendar</a>
-                        <a href="calendar-worthing.html" class="btn red-border">Switch to Worthing Beach Calendar</a>
+                        <a href="calendar-worthing.html" class="btn red-border">Switch to Worthing Beach</a>
                     </div>
-                    <br />
+                    <br>
                     <div id="filter-buttons" class="entry-content elements-container">
-
                     </div>
                 </div>
             </div>
@@ -180,7 +153,9 @@
     <script type='text/javascript' src='js/jquery.countTo.min.js'></script>
     <script type='text/javascript' src='js/jquery.barfiller.js'></script>
     <script type='text/javascript' src='js/custom.js'></script>
-
+    <script type="text/javascript">
+        renderFooter("")
+    </script>
 </body>
 
 </html>

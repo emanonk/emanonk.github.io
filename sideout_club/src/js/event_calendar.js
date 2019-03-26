@@ -41,7 +41,8 @@ const URL_LONDON_FINALS = "london-finals.html";
 const URL_TRAINING = "membership.html"
 
 //INFO
-const INFO_OPEN_PLAY = "18:00-22:00, £10 per person (£5 for Club members, FREE with Social, Open Group or Private Group add-on), No need to register"
+// const INFO_OPEN_PLAY = "18:00-22:00, £10 per person (£5 for Club members, FREE with Social, Open Group or Private Group add-on), No need to register"
+const INFO_OPEN_PLAY = "18:00-22:00"
 
 //TOURNAMENT COLORS
 const COLOR_AYCP          = "#1d29e4";
@@ -518,12 +519,11 @@ var buttonTraining = "btn red-border";
     			buttonAll = "btn gradient-bg";
 		}
 
-		var buttonsDiv = document.getElementById('filter-buttons');
-	buttonsDiv.innerHTML = 
+		document.getElementById('filter-buttons').innerHTML = 
 	"<a onclick=\"eventController('display-all')\" href=\"#\" class=\" "+buttonAll+" \">&nbsp;&nbsp;&nbsp;&nbsp;All Events&nbsp;&nbsp;&nbsp;</a>\
     <a onclick=\"eventController('Tournament')\" href=\"#\" class=\" "+buttonTournament+" \">Tournaments</a>\
     <a onclick=\"eventController('Play')\" href=\"#\" class=\" "+buttonPlay+" \">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Play&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>\
-    <a onclick=\"eventController('Training')\" href=\"#\" class=\" "+buttonTraining+" \">&nbsp;&nbsp;&nbsp;&nbsp;Trainings&nbsp;&nbsp;&nbsp;&nbsp;</a>";
+    <a onclick=\"eventController('Training')\" href=\"#\" class=\" "+buttonTraining+" \">&nbsp;&nbsp;&nbsp;&nbsp;Training&nbsp;&nbsp;&nbsp;&nbsp;</a>";
 }
 
 function eventController(filter){

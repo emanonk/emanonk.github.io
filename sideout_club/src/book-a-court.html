@@ -43,44 +43,16 @@
             background-color: #A5A5A5;
         }
     </style>
-
+    <script type='text/javascript' src='js/mainMenu.js'></script>
 </head>
 
 <body>
     <header class="site-header">
-        <div class="nav-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
-                        <div class="site-branding d-flex align-items-center">
-                            <a class="d-block" href="index.html" rel="home"><img class="d-block" src="images/logo_3.png"
-                                    alt="logo"></a>
-                        </div><!-- .site-branding -->
-
-                        <nav class="site-navigation d-flex justify-content-end align-items-center">
-                            <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="membership.html">Membership</a></li>
-                                <li class="current-menu-item"><a href="book-a-court.html">Book a court</a></li>
-                                <li><a href="calendar-leyton.html">Event Calendar</a></li>
-                                <li><a href="tournaments.html">Tournaments</a></li>
-                                <li><a href="camps-and-clinics.html">Camps & Clinics</a></li>
-                                <li><a href="meet-the-team.html">Meet the Team</a></li>
-                            </ul>
-                        </nav><!-- .site-navigation -->
-
-                        <div class="hamburger-menu d-lg-none">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div><!-- .hamburger-menu -->
-                    </div><!-- .col -->
-                </div><!-- .row -->
-            </div><!-- .container -->
-        </div><!-- .nav-bar -->
-    </header><!-- .site-header -->
-    <br />
+        <div id="mainMenu" class="nav-bar">
+        </div>
+    </header>
+    <script type="text/javascript">renderMenu("bookCourt","");</script>
+    <br>
 
     <div class="featured-cause">
         <div class="container">
@@ -91,7 +63,12 @@
                     </div><!-- .section-heading -->
                 </div><!-- .col -->
             </div><!-- .row -->
-            <br />
+        </div><!-- .container -->
+    </div><!-- .featured-cause -->
+    <br />
+
+    <div class="featured-cause">
+        <div class="container">
             <div class="row">
                 <h3 class="entry-title">SideOut has 2 new homes!</h3>
             </div>
@@ -258,6 +235,7 @@
 
     <script type="text/javascript">
         appender('leytonBooking')
+        renderFooter("")
     </script>
 
 </body>
