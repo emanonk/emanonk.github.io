@@ -103,8 +103,8 @@ if( venue == 'leytonBooking'){
   map.innerHTML = mapLeyton;
 }else{
   beachTitle.innerHTML = beachTitleWorthing
-  worthingBut.innerHTML = '<a id="worthingButton" href="#" onclick="appender(\'worthingBooking\')" class="btn gradient-bg mr-2">Book a court</a>'
-  leytonBut.innerHTML = '<a id="leytonButton" href="#" onclick="appender(\'leytonBooking\')" class="btn red-border">Book a court</a>'
+  worthingBut.innerHTML = '<a id="worthingButton" href="#" onclick="appender(\'worthingBooking\')" class="btn gradient-bg mr-2">Book a court here</a>'
+  leytonBut.innerHTML = '<a id="leytonButton" href="#" onclick="appender(\'leytonBooking\')" class="btn red-border">Book a court here</a>'
   locationHeader.innerHTML = 'Worthing Beach Location'
   link = 'src="https://www-sideout-co-uk.filesusr.com/html/a1273a_31379c57d27a21ec3f54f346939fc991.html"';
   shortContent1.innerHTML = shortContentWorthing1;

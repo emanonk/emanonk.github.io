@@ -779,7 +779,7 @@ ul.tabs-nav .tab-nav.active {
     padding-bottom: 24px;
     font-size: 36px;
     font-weight: 600;
-    color: #ff0000;
+    color: #000000;
 }
 
 .welcome-content .entry-title::before {
@@ -1411,7 +1411,7 @@ ul.tabs-nav .tab-nav.active {
 }
 
 .short-content p {
-    margin-top: 40px;
+    /* margin-top: 40px; */
     font-size: 14px;
     color: #929191;
 }
@@ -1595,7 +1595,10 @@ ul.tabs-nav .tab-nav.active {
 
 .news-content {
     margin-bottom: 64px;
+    /* background: rgb(100, 42, 42); */
+    /* border-style: solid; */
 }
+
 
 .news-content:nth-last-of-type(1) {
     margin-bottom: 0;
@@ -1604,6 +1607,7 @@ ul.tabs-nav .tab-nav.active {
 .news-content img {
     display: block;
     width: 100%;
+    height: 80%;
     margin: 0;
 }
 
@@ -1622,7 +1626,7 @@ ul.tabs-nav .tab-nav.active {
 }
 
 .news-content .entry-title a {
-    color: #262626;
+    color: #000000;
 }
 
 .news-content .posted-date {
@@ -1634,11 +1638,11 @@ ul.tabs-nav .tab-nav.active {
 .post-metas {
     font-size: 12px;
     line-height: 1;
-    color: #929191;
+    color: #000000;
 }
 
 .post-metas a {
-    color: #929191;
+    color: #000000;
 }
 
 .post-metas > span {
@@ -1646,7 +1650,7 @@ ul.tabs-nav .tab-nav.active {
     padding-right: 10px;
     margin-top: 6px;
     margin-right: 10px;
-    border-right: 1px solid #929191;
+    border-right: 1px solid #000000;
 }
 
 .post-metas > span:nth-last-of-type(1) {
@@ -1658,7 +1662,7 @@ ul.tabs-nav .tab-nav.active {
 .news-content .entry-content {
     margin-top: 32px;
     font-size: 14px;
-    color: #929191;
+    color: #000000;
 }
 
 .news-content .entry-footer {

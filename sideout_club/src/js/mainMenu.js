@@ -30,7 +30,7 @@ function renderMenu(filter, level) {
 
   var index = '<li><a href="index.html">Home</a></li>';
   var membership = '<li><a href="membership.html">Membership</a></li>';
-  var bookCourt = '<li><a href="book-a-court.html">Book a court</a></li>';
+  var bookCourt = '<li><a href="book-a-court-leyton.html">Book a court</a></li>';
   var calendar = '<li><a href="calendar-worthing.html">Events Calendar</a></li>';
   var tournaments = '<li><a href="tournaments.html">Tournaments</a></li>';
   var camps = '<li><a href="camps-and-clinics.html">Camps & Clinics</a></li>';
