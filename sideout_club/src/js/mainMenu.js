@@ -28,10 +28,15 @@ const PART2 =
 
 function renderMenu(filter, level) {
 
+  console.log(navigator.userAgent);
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    console.log("yes");
+   }
+
   var index = '<li><a href="index.html">Home</a></li>';
   var membership = '<li><a href="membership.html">Membership</a></li>';
   var bookCourt = '<li><a href="book-a-court-leyton.html">Book a court</a></li>';
-  var calendar = '<li><a href="calendar-worthing.html">Events Calendar</a></li>';
+  var calendar = '<li><a href="calendar-leyton.html">Events Calendar</a></li>';
   var tournaments = '<li><a href="tournaments.html">Tournaments</a></li>';
   var camps = '<li><a href="camps-and-clinics.html">Camps & Clinics</a></li>';
   var team = '<li><a href="meet-the-team.html">Meet the Team</a></li>';
@@ -44,10 +49,10 @@ function renderMenu(filter, level) {
       membership = '<li class="current-menu-item"><a href="' + level + 'membership.html">Membership</a></li>';
       break;
     case "bookCourt":
-      bookCourt = '<li class="current-menu-item"><a href="' + level + 'book-a-court.html">Book a court</a></li>';
+      bookCourt = '<li class="current-menu-item"><a href="' + level + 'book-a-court-leyton.html">Book a court</a></li>';
       break;
     case "calendar":
-      calendar = '<li class="current-menu-item"><a href="' + level + 'calendar-worthing.html">Events Calendar</a></li>';
+      calendar = '<li class="current-menu-item"><a href="' + level + 'calendar-leyton.html">Events Calendar</a></li>';
       break;
     case "tournaments":
     tournaments = '<li class="current-menu-item"><a href="' + level + 'tournaments.html">Tournaments</a></li>';
