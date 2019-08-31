@@ -528,10 +528,10 @@ function filterButtons(filter) {
 	}
 
 	document.getElementById('filter-buttons').innerHTML =
-		"<a onclick=\"eventController('display-all')\" href=\"#\" class=\" " + buttonAll + " \">&nbsp;&nbsp;&nbsp;&nbsp;All Events&nbsp;&nbsp;&nbsp;</a>\
-    <a onclick=\"eventController('Tournament')\" href=\"#\" class=\" "+ buttonTournament + " \">Tournaments</a>\
-    <a onclick=\"eventController('Play')\" href=\"#\" class=\" "+ buttonPlay + " \">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Play&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>\
-    <a onclick=\"eventController('Training')\" href=\"#\" class=\" "+ buttonTraining + " \">&nbsp;&nbsp;&nbsp;&nbsp;Training&nbsp;&nbsp;&nbsp;&nbsp;</a>";
+		"<a onclick=\"eventController('display-all')\" href=\"#\" style='width: 250px' class=\" " + buttonAll + " \">All Events</a>\
+    <a onclick=\"eventController('Tournament')\" href=\"#\" style='width: 250px' class=\" "+ buttonTournament + " \">Tournaments</a>\
+    <a onclick=\"eventController('Play')\" href=\"#\" style='width: 250px' class=\" "+ buttonPlay + " \">Play</a>\
+    <a onclick=\"eventController('Training')\" href=\"#\" style='width: 250px' class=\" "+ buttonTraining + " \">Training</a>";
 }
 
 function eventController(filter,dateFilter) {
