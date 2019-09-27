@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<!-- <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-analytics.js"></script> -->
+<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-functions.js"></script>
+
+<body>
+</head>
+
+<body>
+
+
+<!-- <h2 class="w3-center">Automatic Slideshow</h2> -->
+
+<div class="w3-content w3-section" style="max-width:500px">
+  
+  <div class="w3-container">
+    <h2>www.national-lottery.co.uk</h2>
+    <!-- <p>Create paper-like cards with the w3-card classes:</p> -->
+
+    <div id="uk_euromillions" class="w3-panel w3-card"><p>w3-card</p></div>
+    <div id="uk_lotto" class="w3-panel w3-card-2"><p>w3-card-2</p></div>
+  </div>
+
+  <div class="w3-container">
+    <h2>https://www.illinoislottery.com/</h2>
+    <!-- <p>Create paper-like cards with the w3-card classes:</p> -->
+
+    <div id="illinois_lotto" class="w3-panel w3-card"><p>w3-card</p></div>
+    <div id="illinois_powerball" class="w3-panel w3-card-2"><p>w3-card-2</p></div>
+    <div id="illinois_megamillions" class="w3-panel w3-card-4"><p>w3-card-4</p></div>
+  </div>
+
+  <div class="w3-container">
+    <h2>jeux.loro.ch</h2>
+    <!-- <p>Create paper-like cards with the w3-card classes:</p> -->
+    <div id="swiss_lotto" class="w3-panel w3-card"><p>w3-card</p></div>
+  </div>
+
+  
+  <span class="mySlides"> </span>
+  <!-- <span class="mySlides"> UK here</span>
+  <span class="mySlides"> Loro here</span> -->
+  <!-- <img class="mySlides" src="img_chicago.jpg" style="width:100%"> -->
+</div>
+
+
+
+<script>
+var myIndex = 0;
+carousel();
+
+var firebaseConfig = {
+    apiKey: "AIzaSyD9y9DjV6Iy6R105SfB63YGFWmhApav8p0",
+    authDomain: "jackpots-cb96c.firebaseapp.com",
+    databaseURL: "https://jackpots-cb96c.firebaseio.com",
+    projectId: "jackpots-cb96c",
+    storageBucket: "jackpots-cb96c.appspot.com",
+    messagingSenderId: "523477005708",
+    appId: "1:523477005708:web:501fc83fd17b536b3a52a9",
+    measurementId: "G-KXC2TPD7Y6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  //.analytics();
+
+  var database = firebase.firestore();
+
+  /////////////////////////////////////////////////////////////////////////////////////
+  var ukEuromillionsRef = database.collection('online_jackpots').doc("uk_euromillions");
+  var ukEuromillionsData;
+  ukEuromillionsRef.get().then(function(doc) {
+    if (doc.exists) {
+      ukEuromillionsData = doc.data();
+      var ukEuromillionsElement = document.getElementById('uk_euromillions');
+      ukEuromillionsElement.innerHTML = '<p>'+ukEuromillionsData.gameName+'</p>' + '<p>' + ukEuromillionsData.date + '</p>' + '<p>' + ukEuromillionsData.prize + '</p>'
+      // console.log("Document data:", doc.data());
+    } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+    }
+  }).catch(function(error) {
+    console.log("Error getting document:", error);
+  });
+
+  /////////////////////////////////////////////////////////////////////////////////////
+  var ukLottoRef = database.collection('online_jackpots').doc("uk_lotto");
+
+  ukLottoRef.get().then(function(doc) {
+    if (doc.exists) {
+      var test = doc.data();
+      var ukLottoElement = document.getElementById('uk_lotto');
+      ukLottoElement.innerHTML = '<p>'+test.gameName+'</p>' + '<p>' + test.date + '</p>' + '<p>' + test.prize + '</p>'
+      // console.log("Document data:", doc.data());
+    } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+    }
+  }).catch(function(error) {
+    console.log("Error getting document:", error);
+  });
+
+  /////////////////////////////////////////////////////////////////////////////////////
+  var illinoisLottoRef = database.collection('online_jackpots').doc("illinois_lotto");
+
+  illinoisLottoRef.get().then(function(doc) {
+    if (doc.exists) {
+      var test = doc.data();
+      var illinoisLottoElement = document.getElementById('illinois_lotto');
+      illinoisLottoElement.innerHTML = '<p>'+test.gameName+'</p>' + '<p>' + test.date + '</p>' + '<p>' + test.prize + '</p>'
+      // console.log("Document data:", doc.data());
+    } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+    }
+  }).catch(function(error) {
+    console.log("Error getting document:", error);
+  });
+
+  /////////////////////////////////////////////////////////////////////////////////////
+  var illinoisPowerballRef = database.collection('online_jackpots').doc("illinois_powerball");
+
+  illinoisPowerballRef.get().then(function(doc) {
+    if (doc.exists) {
+      var test = doc.data();
+      var illinoisPowerballElement = document.getElementById('illinois_powerball');
+      illinoisPowerballElement.innerHTML = '<p>'+test.gameName+'</p>' + '<p>' + test.date + '</p>' + '<p>' + test.prize + '</p>'
+      // console.log("Document data:", doc.data());
+    } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+    }
+  }).catch(function(error) {
+    console.log("Error getting document:", error);
+  });
+
+  /////////////////////////////////////////////////////////////////////////////////////
+  var illinoisMegamillionsRef = database.collection('online_jackpots').doc("illinois_megamillions");
+
+  illinoisMegamillionsRef.get().then(function(doc) {
+    if (doc.exists) {
+      var test = doc.data();
+      var illinoisMegamillionsElement = document.getElementById('illinois_megamillions');
+      illinoisMegamillionsElement.innerHTML = '<p>'+test.gameName+'</p>' + '<p>' + test.date + '</p>' + '<p>' + test.prize + '</p>'
+      // console.log("Document data:", doc.data());
+    } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+    }
+  }).catch(function(error) {
+    console.log("Error getting document:", error);
+  });
+
+  /////////////////////////////////////////////////////////////////////////////////////
+  var swissLottoRef = database.collection('online_jackpots').doc("swiss_lotto");
+
+  swissLottoRef.get().then(function(doc) {
+    if (doc.exists) {
+      var test = doc.data();
+      var swissLottoElement = document.getElementById('swiss_lotto');
+      swissLottoElement.innerHTML = '<p>'+test.gameName+'</p>' + '<p>' + test.date + '</p>' + '<p>' + test.prize + '</p>'
+      // console.log("Document data:", doc.data());
+    } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+    }
+  }).catch(function(error) {
+    console.log("Error getting document:", error);
+  });
+
+
+
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>
