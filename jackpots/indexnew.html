@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Jackpots</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    .mySlides {
+      display: none;
+    }
+  </style>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-analytics.js"></script> -->
+  <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-functions.js"></script>
+
+
+</head>
+
+<body>
+
+
+  <!-- <h2 class="w3-center">Automatic Slideshow</h2> -->
+  <!-- europe -->
+  <div class="w3-content w3-section">
+    <div class="w3-container w3-cell">
+      <img src="logos/eu_flag_50px.jpg">
+    </div>
+
+    <div class="w3-container  w3-cell">
+        <img src="logos/euromillions_100.png">
+      <div id="uk_euromillions" class="w3-panel w3-card w3-blue">
+        <p>uk_euromillions</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- <div class="w3-container w3-cell">
+      <img src="logos/uk_logo1.png">
+    </div> -->
+
+    <div class="w3-container  w3-cell">
+        <img src="logos/uk_logo1.png">
+      <div id="uk_lotto" class="w3-panel w3-card-2 w3-blue">
+        <p>uk_lotto</p>
+      </div>
+    </div>
+
+    <!-- <div class="w3-container  w3-cell">
+      <img src="logos/ireland_logo1.png">
+    </div> -->
+
+    <div class="w3-container  w3-cell">
+        <img src="logos/ireland_logo1.png">
+      <div id="ireland_lotto" class="w3-panel w3-card w3-green">
+        <p>ireland_lotto</p>
+      </div>
+    </div>
+
+    <!-- <div class="w3-container  w3-cell">
+      <img src="logos/swiss_logo1.png">
+    </div> -->
+
+    <div class="w3-container  w3-cell">
+        <img src="logos/swiss_logo1.png">
+      <div id="swiss_lotto" class="w3-panel w3-card w3-orange">
+        <p>swiss_lotto</p>
+      </div>
+    </div>
+
+    <hr>
+    <!-- us -->
+    <div class="w3-container w3-cell">
+      <img src="logos/us_flag_50px.png">
+    </div>
+
+    <div class="w3-container w3-cell">
+        <img src="logos/power2.png">
+      <div id="illinois_powerball" class="w3-panel w3-card-2 w3-red">
+        <p>illinois_powerball</p>
+      </div>
+    </div>
+
+    <div class="w3-container w3-cell">
+        <img src="logos/mega1.png">
+      <div id="illinois_megamillions" class="w3-panel w3-card-4 w3-red">
+        <p>illinois_megamillions</p>
+      </div>
+    </div>
+
+    <hr>
+<!-- 
+    <div class="w3-container w3-cell">
+      <img src="logos/illinois_logo1.png">
+    </div> -->
+
+    <div class="w3-container  w3-cell">
+        <img src="logos/illinois_logo1.png">
+      <div id="illinois_lotto" class="w3-panel w3-card w3-red">
+        <p>illinois_lotto</p>
+      </div>
+    </div>
+
+    <!-- <div class="w3-container  w3-cell">
+      <img src="logos/arkansas_logo1.png">
+    </div> -->
+
+    <div class="w3-container  w3-cell">
+        <img src="logos/arkansas_logo1.png">
+      <div id="arkansas_natural_state" class="w3-panel w3-card w3-blue">
+        <p>arkansas_natural_state</p>
+      </div>
+    </div>
+
+    
+    <!-- 
+      <hr>
+      <div class="w3-container  w3-cell">
+      <img src="logos/uk_logo1.png">
+    </div>
+
+    <div class="w3-container  w3-cell">
+      <img src="logos/swiss_logo1.png">
+    </div>
+
+    <div class="w3-container  w3-cell">
+      <img src="logos/ireland_logo1.png">
+    </div>
+
+    <div class="w3-container  w3-cell">
+      <img src="logos/illinois_logo1.png">
+    </div>
+
+    <div class="w3-container  w3-cell">
+      <img src="logos/arkansas_logo1.png">
+    </div> -->
+
+
+    <span class="mySlides"> </span>
+    <!-- <span class="mySlides"> UK here</span>
+    <span class="mySlides"> Loro here</span> -->
+    <!-- <img class="mySlides" src="img_chicago.jpg" style="width:100%"> -->
+  </div>
+
+
+
+  <script>
+    var myIndex = 0;
+    carousel();
+
+    var firebaseConfig = {
+      apiKey: "AIzaSyD9y9DjV6Iy6R105SfB63YGFWmhApav8p0",
+      authDomain: "jackpots-cb96c.firebaseapp.com",
+      databaseURL: "https://jackpots-cb96c.firebaseio.com",
+      projectId: "jackpots-cb96c",
+      storageBucket: "jackpots-cb96c.appspot.com",
+      messagingSenderId: "523477005708",
+      appId: "1:523477005708:web:501fc83fd17b536b3a52a9",
+      measurementId: "G-KXC2TPD7Y6"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    //.analytics();
+
+    var database = firebase.firestore();
+
+    templateTwo('online_jackpots', 'uk_euromillions', 'uk_euromillions');
+    template('online_jackpots', 'uk_lotto', 'uk_lotto');
+    template('online_jackpots', 'illinois_lotto', 'illinois_lotto');
+    templateTwo('online_jackpots', 'illinois_powerball', 'illinois_powerball');
+    templateTwo('online_jackpots', 'illinois_megamillions', 'illinois_megamillions');
+    template('online_jackpots', 'swiss_lotto', 'swiss_lotto');
+    template('online_jackpots', 'ireland_lotto', 'ireland_lotto');
+    template('online_jackpots', 'arkansas_natural_state', 'arkansas_natural_state');
+
+    function template(dbCollection, dbDocument, elementName) {
+      var documentRef = database.collection(dbCollection).doc(dbDocument);
+
+      documentRef.onSnapshot(function (doc) {
+        if (doc.exists) {
+          var documentData = doc.data();
+          var htmlElement = document.getElementById(elementName);
+          htmlElement.innerHTML = '<p>' + documentData.gameName + ' ' + documentData.prize + '</p>' + '<p>' + documentData.date + '</p>';
+          console.log("Document data:", doc.data());
+        } else {
+          // doc.data() will be undefined in this case
+          console.log("No such document!");
+        }
+      }, function (error) {
+        console.log("Error getting document:", error);
+      });
+    }
+
+    function templateTwo(dbCollection, dbDocument, elementName) {
+      var documentRef = database.collection(dbCollection).doc(dbDocument);
+
+      documentRef.onSnapshot(function (doc) {
+        if (doc.exists) {
+          var documentData = doc.data();
+          var htmlElement = document.getElementById(elementName);
+          htmlElement.innerHTML = '<p>' + documentData.prize + '</p>' + '<p>' + documentData.date + '</p>';
+          console.log("Document data:", doc.data());
+        } else {
+          // doc.data() will be undefined in this case
+          console.log("No such document!");
+        }
+      }, function (error) {
+        console.log("Error getting document:", error);
+      });
+    }
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) { myIndex = 1 }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 3000); // Change image every 2 seconds
+    }
+
+    function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+// const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+// const currentTime = moment().tz(timezone).format();
+// console.log(currentTime);
+// console.log(getUrlVars());
+  </script>
+
+</body>
+
+</html>
