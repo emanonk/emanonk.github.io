@@ -1,139 +1,306 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
 
 <head>
-<title>Jackpots</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
-.mySlides {display:none;}
-</style>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+    <meta charset="UTF-8">
+    <title>Jackpots</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<!-- <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-analytics.js"></script> -->
-<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-functions.js"></script>
+    <!-- <link rel="stylesheet" href="one.css" type="text/css"> -->
+    <link rel="stylesheet" href="two.css" type="text/css">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
 
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-analytics.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-functions.js"></script>
 
 </head>
 
-<body>
+<body class="page ill-site-page" data-test-id="illi-page-homepage">
 
+    <div class="main responsivegrid">
+        <div class="aem-Grid aem-Grid--12 aem-Grid--default--12   ">
 
-<!-- <h2 class="w3-center">Automatic Slideshow</h2> -->
+            <div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+                <div
+                    class="aem-Grid aem-Grid--12 aem-Grid--default--12 aem-Grid--tablet--12 aem-Grid--phone--12  padded-container ">
+                    <!-- <div class="title aem-GridColumn aem-GridColumn--default--12">
+                        <div class="cmp-title ">
+                            <h2 class="cmp-title__text">All Games</h2>
+                            <div class="cmp-title__subtitle"></div>
+                        </div>
+                    </div> -->
 
-<div class="w3-content w3-section" style="max-width:500px">
-  
-  <div class="w3-container">
-    <!-- <h2>UK Lottery</h2> -->
-    <!-- <p>Create paper-like cards with the w3-card classes:</p> -->
-	<img src="logos/uk_logo1.png">
-    <div id="uk_euromillions" class="w3-panel w3-card w3-blue"><p>uk_euromillions</p></div>
-    <div id="uk_lotto" class="w3-panel w3-card-2 w3-blue"><p>uk_lotto</p></div>
-  </div>
+                    <div class="gamespromo aem-GridColumn aem-GridColumn--default--12">
+                        <div class="games-promo card-container">
 
-  <div class="w3-container">
-    <!-- <h2>Illinois Lottery</h2> -->
-    <img src="logos/illinois_logo1.png">
-    <!-- <p>Create paper-like cards with the w3-card classes:</p> -->
-    <div id="illinois_lotto" class="w3-panel w3-card w3-red"><p>illinois_lotto</p></div>
-    <div id="illinois_powerball" class="w3-panel w3-card-2 w3-red"><p>illinois_powerball</p></div>
-    <div id="illinois_megamillions" class="w3-panel w3-card-4 w3-red"><p>illinois_megamillions</p></div>
-  </div>
+                            <!-- MEGAMILLIONS -->
+                            <div
+                                class="card-container__item games-promo__block games-promo__block--play-game megamillions games-promo__block--default games-promo__block--play ">
+                                <div class="games-promo__logo-container">
+                                    <img class="games-promo__logo" src="images/MegaMillions-logo.svg" alt="MEGA MILLIONS"
+                                        role="img" />
+                                </div>
+                                <!-- <div class="games-promo__splitter"></div> -->
+                                <div class="games-promo__content-container">
+                                    <div class="games-promo__text">
+                                        <span id="megamillions_title"></span>
+                                    </div>
+                                    <div class="games-promo__prize">
+                                        <span id="megamillions_amount" class="games-promo__prize-amount"></span>
+                                    </div>
+                                    <div id="megamillions_date" class="games-promo__date"></div>
+                                </div>
+                            </div>
 
-  <div class="w3-container">
-    <!-- <h2>Loterie Romande</h2> -->
-    <img src="logos/swiss_logo1.png">
-    <!-- <p>Create paper-like cards with the w3-card classes:</p> -->
-    <div id="swiss_lotto" class="w3-panel w3-card w3-orange"><p>swiss_lotto</p></div>
-  </div>
+                            <!-- LOTTO -->
+                            <div
+                                class="card-container__item games-promo__block games-promo__block--play-game lotto games-promo__block--default games-promo__block--play">
+                                <div class="games-promo__logo-container">
+                                    <img class="games-promo__logo" src="images/Lotto_logo-orangeR.svg" alt="LOTTO"
+                                        role="img" />
+                                </div>
+                                <!-- <div class="games-promo__splitter"></div> -->
+                                <div class="games-promo__content-container">
+                                    <div class="games-promo__text">
+                                        <span id="illinois_lotto_title"></span>
+                                    </div>
+                                    <div class="games-promo__prize">
+                                        <span id="illinois_lotto_amount" class="games-promo__prize-amount"></span>
+                                    </div>
+                                    <div id="illinois_lotto_date" class="games-promo__date"></div>
+                                </div>
+                            </div>
 
-  <div class="w3-container">
-    <!-- <h2>Ireland Lottery</h2> -->
-    <img src="logos/ireland_logo1.png">
-    <!-- <p>Create paper-like cards with the w3-card classes:</p> -->
-    <div id="ireland_lotto" class="w3-panel w3-card w3-green"><p>ireland_lotto</p></div>
-  </div>
+                            <!-- POWERBALL -->
+                            <div
+                                class="card-container__item games-promo__block games-promo__block--play-game powerball games-promo__block--default games-promo__block--play ">
+                                <div class="games-promo__logo-container">
+                                    <img class="games-promo__logo" src="images/Powerball-logo.svg" alt="POWERBALL"
+                                        role="img" />
+                                </div>
+                                <!-- <div class="games-promo__splitter"></div> -->
+                                <div class="games-promo__content-container">
+                                    <div class="games-promo__text">
+                                        <span id="powerball_title"></span>
+                                    </div>
+                                    <div class="games-promo__prize">
+                                        <span id="powerball_amount" class="games-promo__prize-amount"></span>
+                                    </div>
+                                    <div id="powerball_date" class="games-promo__date"></div>
+                                </div>
+                            </div>
 
-  <div class="w3-container">
-    <!-- <h2>Arkansas Lottery</h2> -->
-    <img src="logos/arkansas_logo1.png">
-    <!-- <p>Create paper-like cards with the w3-card classes:</p> -->
-    <div id="arkansas_natural_state" class="w3-panel w3-card w3-blue"><p>arkansas_natural_state</p></div>
-  </div>
+                            <!-- EUROMILLIONS -->
+                            <div
+                                class="card-container__item games-promo__block games-promo__block--play-game luckydaylotto games-promo__block--default games-promo__block--subscribe ">
+                                <div class="games-promo__logo-container">
+                                    <img class="games-promo__logo" src="images/euromillions_100.png"
+                                        alt="LUCKY DAY LOTTO" role="img" />
+                                </div>
+                                <!-- <div class="games-promo__splitter"></div> -->
+                                <div class="games-promo__content-container">
+                                    <div class="games-promo__text">
+                                        <span id="euromillions_title"></span>
+                                    </div>
+                                    <div class="games-promo__prize">
+                                        <span id="euromillions_amount" class="games-promo__prize-amount"></span>
+                                    </div>
+                                    <div id="euromillions_date" class="games-promo__date">
+                                    </div>
+                                </div>
+                            </div>
 
-  
-  <span class="mySlides"> </span>
-  <!-- <span class="mySlides"> UK here</span>
-  <span class="mySlides"> Loro here</span> -->
-  <!-- <img class="mySlides" src="img_chicago.jpg" style="width:100%"> -->
-</div>
+                            <!-- UK LOTTO -->
+                            <div
+                                class="card-container__item games-promo__block games-promo__block--play-game game1 games-promo__block--default games-promo__block--subscribe ">
+                                <div class="games-promo__logo-container">
+                                    <img class="games-promo__logo" src="images/lotto_logo_only_retina.png" alt="PICK 3"
+                                        role="img" />
+                                </div>
+                                <!-- <div class="games-promo__splitter"></div> -->
+                                <div class="games-promo__content-container">
+                                    <div class="games-promo__text">
+                                        <span id="uk_lotto_title"></span>
+                                    </div>
+                                    <div class="games-promo__prize">
+                                        <span id="uk_lotto_amount" class="games-promo__prize-amount"></span>
+                                    </div>
+                                    <div id="uk_lotto_date" class="games-promo__date">
+                                    </div>
+                                </div>
+                            </div>
 
+                            <!-- IRELAND LOTTO 180deg,#009813c9,#009047 30%,#46bf28 70.05%)-->
+                            <div
+                                class="card-container__item games-promo__block games-promo__block--play-game game2 games-promo__block--default games-promo__block--subscribe ">
+                                <div class="games-promo__logo-container">
+                                    <img class="games-promo__logo" src="images/lotto-logo-wide.svg" alt="PICK 4"
+                                        role="img" />
+                                </div>
+                                <!-- <div class="games-promo__splitter"></div> -->
+                                <div class="games-promo__content-container">
+                                    <div class="games-promo__text">
+                                        <span id="ir_lotto_title"></span>
+                                    </div>
+                                    <div class="games-promo__prize">
+                                        <span id="ir_lotto_amount" class="games-promo__prize-amount"></span>
+                                    </div>
+                                    <div id="ir_lotto_date" class="games-promo__date">
+                                    </div>
+                                </div>
+                            </div>
 
+                            <!-- SWISS LOTTO -->
+                            <div
+                                class="card-container__item games-promo__block games-promo__block--play-game game3 games-promo__block--default games-promo__block--subscribe ">
+                                <div class="games-promo__logo-container">
+                                    <img class="games-promo__logo" src="images/swiss_loto_logo.png" alt="PICK 4"
+                                        role="img" />
+                                </div>
+                                <!-- <div class="games-promo__splitter"></div> -->
+                                <div class="games-promo__content-container">
+                                    <div class="games-promo__text">
+                                        <span id="swiss_lotto_title"></span>
+                                    </div>
+                                    <div class="games-promo__prize">
+                                        <span id="swiss_lotto_amount" class="games-promo__prize-amount"></span>
+                                    </div>
+                                    <div id="swiss_lotto_date" class="games-promo__date">
+                                    </div>
+                                </div>
+                            </div>
 
-<script>
-var myIndex = 0;
-carousel();
+                            <!-- NATURAL STATE -->
+                            <div
+                                class="card-container__item games-promo__block games-promo__block--play-game game4 games-promo__block--default games-promo__block--subscribe ">
+                                <div class="games-promo__logo-container">
+                                    <img class="games-promo__logo" src="images/nsj.png" alt="PICK 4" role="img" />
+                                </div>
+                                <!-- <div class="games-promo__splitter"></div> -->
+                                <div class="games-promo__content-container">
+                                    <div class="games-promo__text">
+                                        <span id="ark_lotto_title"></span>
+                                    </div>
+                                    <div class="games-promo__prize">
+                                        <span id="ark_lotto_amount" class="games-promo__prize-amount"></span>
+                                    </div>
+                                    <div id="ark_lotto_date" class="games-promo__date">
+                                    </div>
+                                </div>
+                            </div>
 
-var firebaseConfig = {
-    apiKey: "AIzaSyD9y9DjV6Iy6R105SfB63YGFWmhApav8p0",
-    authDomain: "jackpots-cb96c.firebaseapp.com",
-    databaseURL: "https://jackpots-cb96c.firebaseio.com",
-    projectId: "jackpots-cb96c",
-    storageBucket: "jackpots-cb96c.appspot.com",
-    messagingSenderId: "523477005708",
-    appId: "1:523477005708:web:501fc83fd17b536b3a52a9",
-    measurementId: "G-KXC2TPD7Y6"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  //.analytics();
+                            <div
+                                class="card-container__item games-promo__block games-promo__block--play-game pick4 games-promo__block--default games-promo__block--subscribe ">
+                                <div class="games-promo__logo-container">
+                                    <img class="games-promo__logo" src="images/handshake3.png" alt="new customer" role="img" />
+                                </div>
+                                <!-- <div class="games-promo__splitter"></div> -->
+                                <div class="games-promo__content-container">
+                                    <div class="games-promo__text">
+                                        <span>new customer coming</span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
 
-  var database = firebase.firestore();
+                            
 
-  template('online_jackpots', 'uk_euromillions', 'uk_euromillions');
-  template('online_jackpots', 'uk_lotto', 'uk_lotto');
-  template('online_jackpots', 'illinois_lotto', 'illinois_lotto');
-  template('online_jackpots', 'illinois_powerball', 'illinois_powerball');
-  template('online_jackpots', 'illinois_megamillions', 'illinois_megamillions');
-  template('online_jackpots', 'swiss_lotto', 'swiss_lotto');
-  template('online_jackpots', 'ireland_lotto', 'ireland_lotto');
-  template('online_jackpots', 'arkansas_natural_state', 'arkansas_natural_state');
+                            <!-- end of blocks -->
+                        </div>
+                    </div>
+                </div>
 
-  function template(dbCollection, dbDocument, elementName) {
-	var documentRef = database.collection(dbCollection).doc(dbDocument);
-  
-  documentRef.onSnapshot(function(doc) {
-    if (doc.exists) {
-      var documentData = doc.data();
-      var htmlElement = document.getElementById(elementName);
-      htmlElement.innerHTML = '<p>'+documentData.gameName+ ' ' + documentData.prize + '</p>' + '<p>' + documentData.date + '</p>';
-      console.log("Document data:", doc.data());
-    } else {
-        // doc.data() will be undefined in this case
-        console.log("No such document!");
-    }
-  }, function(error) {
-    console.log("Error getting document:", error);
-  });
-}
+            </div>
+        </div>
+    </div>
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 3000); // Change image every 2 seconds
-}
-</script>
+    <div class="footer_conf configuration parbase">
+
+    </div>
+
+    <script>
+        // var myIndex = 0;
+        //carousel();
+
+        var firebaseConfig = {
+            apiKey: "AIzaSyD9y9DjV6Iy6R105SfB63YGFWmhApav8p0",
+            authDomain: "jackpots-cb96c.firebaseapp.com",
+            databaseURL: "https://jackpots-cb96c.firebaseio.com",
+            projectId: "jackpots-cb96c",
+            storageBucket: "jackpots-cb96c.appspot.com",
+            messagingSenderId: "523477005708",
+            appId: "1:523477005708:web:501fc83fd17b536b3a52a9",
+            measurementId: "G-KXC2TPD7Y6"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        //.analytics();
+
+        var database = firebase.firestore();
+
+        template('online_jackpots', 'illinois_megamillions', 'megamillions_title', 'US' , 'megamillions_amount', 'megamillions_date');
+        template('online_jackpots', 'illinois_lotto', 'illinois_lotto_title', '', 'illinois_lotto_amount', 'illinois_lotto_date');
+        template('online_jackpots', 'illinois_powerball', 'powerball_title', 'US' , 'powerball_amount', 'powerball_date');
+        template('online_jackpots', 'uk_euromillions', 'euromillions_title', 'EU' , 'euromillions_amount', 'euromillions_date');
+        template('online_jackpots', 'uk_lotto', 'uk_lotto_title', 'UK' , "uk_lotto_amount", 'uk_lotto_date');
+        template('online_jackpots', 'ireland_lotto', 'ir_lotto_title', 'IRL' , 'ir_lotto_amount', 'ir_lotto_date');
+        template('online_jackpots', 'swiss_lotto', 'swiss_lotto_title', '', 'swiss_lotto_amount', 'swiss_lotto_date');
+        template('online_jackpots', 'arkansas_natural_state', 'ark_lotto_title', 'ARK' , 'ark_lotto_amount', 'ark_lotto_date');
+
+        function template(dbCollection, dbDocument, title_id, addedText, amount_id, date_id) {
+            var documentRef = database.collection(dbCollection).doc(dbDocument);
+
+            documentRef.onSnapshot(function (doc) {
+                if (doc.exists) {
+                    var documentData = doc.data();
+                    var titleElement = document.getElementById(title_id);
+                    var amountElement = document.getElementById(amount_id);
+                    var dateElement = document.getElementById(date_id);
+                    titleElement.innerHTML = addedText + ' ' + documentData.gameName;
+                    amountElement.innerHTML = '<strong>' + documentData.prize + '<strong>';
+                    dateElement.innerHTML = documentData.date;
+                    console.log("Document data:", doc.data());
+                } else {
+                    // doc.data() will be undefined in this case
+                    console.log("No such document!");
+                }
+            }, function (error) {
+                console.log("Error getting document:", error);
+            });
+        }
+
+        
+
+        // function carousel() {
+        //   var i;
+        //   var x = document.getElementsByClassName("mySlides");
+        //   for (i = 0; i < x.length; i++) {
+        //     x[i].style.display = "none";
+        //   }
+        //   myIndex++;
+        //   if (myIndex > x.length) { myIndex = 1 }
+        //   x[myIndex - 1].style.display = "block";
+        //   setTimeout(carousel, 3000); // Change image every 2 seconds
+        // }
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        // const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        // const currentTime = moment().tz(timezone).format();
+        // console.log(currentTime);
+        // console.log(getUrlVars());
+    </script>
 
 </body>
+
 </html>
