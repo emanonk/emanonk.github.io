@@ -42,8 +42,8 @@
                             <div
                                 class="card-container__item games-promo__block games-promo__block--play-game megamillions games-promo__block--default games-promo__block--play ">
                                 <div class="games-promo__logo-container">
-                                    <img class="games-promo__logo" src="images/MegaMillions-logo.svg" alt="MEGA MILLIONS"
-                                        role="img" />
+                                    <img class="games-promo__logo" src="images/MegaMillions-logo.svg"
+                                        alt="MEGA MILLIONS" role="img" />
                                 </div>
                                 <!-- <div class="games-promo__splitter"></div> -->
                                 <div class="games-promo__content-container">
@@ -197,18 +197,19 @@
                             <div
                                 class="card-container__item games-promo__block games-promo__block--play-game pick4 games-promo__block--default games-promo__block--subscribe ">
                                 <div class="games-promo__logo-container">
-                                    <img class="games-promo__logo" src="images/handshake3.png" alt="new customer" role="img" />
+                                    <img class="games-promo__logo" src="images/handshake3.png" alt="new customer"
+                                        role="img" />
                                 </div>
                                 <!-- <div class="games-promo__splitter"></div> -->
                                 <div class="games-promo__content-container">
                                     <div class="games-promo__text">
                                         <span>new customer coming</span>
                                     </div>
-                                    
+
                                 </div>
                             </div>
 
-                            
+
 
                             <!-- end of blocks -->
                         </div>
@@ -221,10 +222,10 @@
 
     <div class="footer_conf configuration parbase">
         <div class="cmp-footer__bottom-nav-bar aem-Grid aem-Grid--12 aem-Grid--phone--12">
-        <div class="ill-cont-copyright" data-test-id="footer-copyright">
-            <div class="container">
-                <p class="ill-language-selector">INTERNAL USE ONLY</p>
-                <!-- <ul class="ill-language-selector" data-test-id="language-selector">
+            <div class="ill-cont-copyright" data-test-id="footer-copyright">
+                <div class="container">
+                    <p class="ill-language-selector">THIS IS A DEMO PAGE</p>
+                    <!-- <ul class="ill-language-selector" data-test-id="language-selector">
                     
                     <li class="lang-link--active">
                         
@@ -239,10 +240,10 @@
                         </a>
                     </li>
                 </ul> -->
-                <p class="copy-info">© Camelot Lottery Solutions 2019</p>
-                
+                    <p class="copy-info">THIS IS A DEMO PAGE</p>
 
-                <!-- <ul class="cmp-footer__copy-links-list ill-copy-links">
+
+                    <!-- <ul class="cmp-footer__copy-links-list ill-copy-links">
                     <li class="cmp-footer__copy-links-list-item">
                         <a href="/policy/terms-and-conditions" target="_self" class="cmp-footer__link">Terms and Conditions</a>
                     </li>
@@ -255,9 +256,9 @@
                         <a href="https://www2.illinois.gov/visiting" target="_self" class="cmp-footer__link">Discover Illinois</a>
                     </li>
                 </ul> -->
+                </div>
             </div>
         </div>
-    </div>
     </div>
 
     <script>
@@ -280,14 +281,19 @@
 
         var database = firebase.firestore();
 
-        template('online_jackpots', 'illinois_megamillions', 'megamillions_title', 'US' , 'megamillions_amount', 'megamillions_date');
-        template('online_jackpots', 'illinois_lotto', 'illinois_lotto_title', '', 'illinois_lotto_amount', 'illinois_lotto_date');
-        template('online_jackpots', 'illinois_powerball', 'powerball_title', 'US' , 'powerball_amount', 'powerball_date');
-        template('online_jackpots', 'uk_euromillions', 'euromillions_title', 'EU' , 'euromillions_amount', 'euromillions_date');
-        template('online_jackpots', 'uk_lotto', 'uk_lotto_title', 'UK' , "uk_lotto_amount", 'uk_lotto_date');
-        template('online_jackpots', 'ireland_lotto', 'ir_lotto_title', 'IRL' , 'ir_lotto_amount', 'ir_lotto_date');
+        template('online_jackpots', 'illinois_megamillions', 'megamillions_title', 'US', 'megamillions_amount',
+            'megamillions_date');
+        template('online_jackpots', 'illinois_lotto', 'illinois_lotto_title', '', 'illinois_lotto_amount',
+            'illinois_lotto_date');
+        template('online_jackpots', 'illinois_powerball', 'powerball_title', 'US', 'powerball_amount',
+        'powerball_date');
+        template('online_jackpots', 'uk_euromillions', 'euromillions_title', 'EU', 'euromillions_amount',
+            'euromillions_date');
+        template('online_jackpots', 'uk_lotto', 'uk_lotto_title', 'UK', "uk_lotto_amount", 'uk_lotto_date');
+        template('online_jackpots', 'ireland_lotto', 'ir_lotto_title', 'IRL', 'ir_lotto_amount', 'ir_lotto_date');
         template('online_jackpots', 'swiss_lotto', 'swiss_lotto_title', '', 'swiss_lotto_amount', 'swiss_lotto_date');
-        template('online_jackpots', 'arkansas_natural_state', 'ark_lotto_title', 'ARK' , 'ark_lotto_amount', 'ark_lotto_date');
+        template('online_jackpots', 'arkansas_natural_state', 'ark_lotto_title', 'ARK', 'ark_lotto_amount',
+            'ark_lotto_date');
 
         function template(dbCollection, dbDocument, title_id, addedText, amount_id, date_id) {
             var documentRef = database.collection(dbCollection).doc(dbDocument);
@@ -311,7 +317,7 @@
             });
         }
 
-        
+
 
         // function carousel() {
         //   var i;
@@ -337,7 +343,7 @@
         // const currentTime = moment().tz(timezone).format();
         // console.log(currentTime);
         // console.log(getUrlVars());
-//manos commit
+        //manos commit
     </script>
 
 </body>
