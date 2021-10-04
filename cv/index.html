@@ -91,8 +91,8 @@
         }
 
         #objective {
-            width: 500px;
-            float: left;
+            /* width: 500px;
+            float: left; */
         }
 
         #objective p {
@@ -130,7 +130,7 @@
 
     <div id="page-wrap">
 
-        <img src="images/Manos-Kammas.jpg" width="150" height="200" alt="This is Me" id="pic" />
+        <!-- <img src="images/Manos-Kammas.jpg" width="150" height="200" alt="This is Me" id="pic" /> -->
 
         <div id="contact-info" class="vcard">
 
@@ -142,20 +142,16 @@
                 Email: <a class="email" href="mailto:manos_kammas@hotmail.com">manos_kammas@hotmail.com</a>
             </p>
             <p>
-                <a href="https://github.com/emanonk/emanonk.github.io/cv/cv.pdf">Download this CV
-                    as a PDF</a>
+                <a href="CV_2021.pdf" target="_blank">Download PDF</a>
+
             </p>
         </div>
 
         <div id="objective">
             <p>
-                As a software engineer with over 6 years of experience, I have worked mostly in the backend as well as
-                in the frontend,
-                implementing best practices like TDD and BDD, following good principles like SOLID, DRY, KISS and YAGNI
-                and software
-                engineer design patterns. My interests lie in system design and architecture and I am equally effective
-                in a team
-                environment or as a lone specialist.
+                I am a software engineer with over 6 years of experience. I mostly work in backend systems using
+                software engineering best practices and test-driven development. My interests lie in system design and
+                architecture
             </p>
 
         </div>
@@ -169,93 +165,97 @@
             <dd>
                 <h2>Software Engineer <span>ASOS; November 2019 - Present</span></h2>
                 <p><span style="font-style: italic;">Currently working on a team that is responsible to integrate the
-                        Product
-                        Information Management system with other internal teams through API calls in a
-                        devops culture. High performance, resiliency and scalability are the key areas we
-                        are working on.</span></p>
+                        Product Information Management system with other internal teams through API calls embracing
+                        DevOps practices. Our focus is on improving the performance, resiliency and scalability of the
+                        APIs</span></p>
                 <ul>
-                    <li>Developing new features and maintaining more than 25 microservices
+                    <li>Delivering Docker and Kubernetes training to internal teams</li>
+                    <li>Developing new features and maintaining more than 25 microservices</li>
+                    <li>Responsible for improving our operations and triaging incoming incidents</li>
+                    <li>Achieved 10% reduction in our Azure costs by refactoring the test process cleanup to release
+                        unused cloud resources</li>
+                    <li>Organised a series of meetings to promote collaboration and knowledge sharing across engineering
+                        teams</li>
+                    <li>Led a series of ‘Engineering Decisions’ meetings to discuss new technologies, and promote best
+                        practices within my team. These included code consistency approaches, test hygienic, and test
+                        framework comparisons (e.g. JUnit 5 vs Spock), showcasing the benefits in developers efficiency
                     </li>
-                    <li>Introduced after tests resources clean up that reduced the Azure cost by 10%</li>
-                    <li>Following the agile Kanban methodology</li>
-                    <li>Delivering trainings on Docker and Kubernetes</li>
-                    <li>Organised a series of meeting to collaborate with other teams and share solutions
+                    <li>
+                        <span style="font-weight: bold;color: #000;">Technologies used:</span> Java 11, Kibana /
+                        Grafana,
+                        Kubernetes, Azure (Service Bus, Cosmos DB), Spring (Boot, Actuator), Swagger, Route 53
                     </li>
-                    <li>Led a series of meeting discussing new tech stack
-                    </li>
-                    <li>Presented the difference between JUnit 5 and Spock framework and how it
-                        affects developer’s efficiency
-                    </li>
-                </ul>
-
-                <p><strong>Tech Stack</strong></p>
-                <!-- <p>Self-assessed levels: [awareness, working, practitioner, expert]</p> -->
-                <ul>
-                    <li>Java 11</li>
-                    <li>Python</li>
-                    <li>Spring Boot</li>
-                    <li>Swagger</li>
-                    <li>Kubernetes</li>
-                    <li>Azure (AKS, Service Bus, Storage, Cosmos DB)</li>
-                    <li>ELK stack</li>
-                    <li>Grafana</li>
-                    <li>Docker</li>
-                    <li>Helm</li>
-                    <li>Github</li>
-                    <li>Jenkins</li>
-                    <li>JUnit5</li>
-                    <li>Gatling</li>
-                    <li>Wiremock</li>
-                    <li>Gradle</li>
                 </ul>
 
                 <h2>Software Engineer <span>Camelot Lottery Solutions; August 2017 - October 2019</span></h2>
-                <p><span style="font-style: italic;">Took part in developing new features for a Keno type game for the
-                        Loterie
-                        Romande interactive platform. Giving emphasis on performance, availability and
-                        time synchronisation of the 255 draws every day.
+                <p><span style="font-weight: bold;color: #000;">Loterie Romande (2018 - 2019)</span></p>
+                <p><span style="font-style: italic;">Developed new features for a Keno type game for the Loterie Romande
+                        interactive platform. Tackled issues related to the availability and time synchronisation of the
+                        255 daily draws
                     </span></p>
                 <ul>
-                    <li>Redesigned the draw-based game model</li>
-                    <li>Integrated a new apixu API providing weather information</li>
-                    <li>Upgraded Spring 4 to Spring 5
+                    <li>Redesigned the computation domain model used for our draw-based games making it simpler and
+                        easier to reason about</li>
+                    <li>Integrated with “apixu API” in order to provide weather information in our games</li>
+                    <li>Implemented new APIs using Spring Reactor and Server-Sent Events</li>
+                    <li>Architected and deployed microservices on Kubernetes</li>
+                    <li>Proposed, designed, and delivered an internal tool where we could see upcoming draws from our
+                        biggest customers in order to plan ahead and avoid unexpected spikes or issues</li>
+                    <li>
+                        <span style="font-weight: bold;color: #000;">Technologies used:</span> Java 8, Cassandra,
+                        Kubernetes, Wiremock, Docker, Spock, Spring (Boot, Data, Integration)
                     </li>
-                    <li>Exposed new APIs using Spring Reactor and Server-Sent Events</li>
-                    <li>Working on Kubernetes cluster for our QA environments</li>
-                </ul>
-                <p><strong>Tech Stack</strong></p>
-                <p>Self-assessed levels: [awareness, working, practitioner, expert]</p>
-                <ul>
-                    <li>Java 8</li>
-                    <li>Groovy</li>
-                    <li>Spring Boot</li>
-                    <li>Spring Data</li>
-                    <li>Spring Integration</li>
-                    <li>Kubernetes</li>
-                    <li>Cassandra</li>
-                    <li>Docker</li>
-                    <li>Git</li>
-                    <li>Jenkins</li>
-                    <li>Spock</li>
-                    <li>Wiremock</li>
-                    <li>Gradle</li>
                 </ul>
 
 
-                <p><span style="font-style: italic;">Worked on the UK National Lottery web platform which is visited by
-                        millions of
-                        users per day and handles up to 4000 payment transactions per minute. A highly
-                        regulated environment with stress on security and performance.
+                <p><span style="font-weight: bold;color: #000;">UK National Lottery (2017 - 2018)</span></p>
+                <p><span style="font-style: italic;">Worked on the UK National Lottery web platform with millions of
+                        daily active users and more than 4000 payment transactions per minute. A highly regulated
+                        environment with stress on security and performance
                     </span></p>
                 <ul>
-                    <li>Led meetings on automation testing and troubleshooting improvements</li>
-                    <li>Initiative to create tools that reduced manual testing</li>
-                    <li>Provided assistance to the BA to define acceptance criteria in complex tickets</li>
-                    <li>Organised a workshop to define our automation test strategy</li>
-
+                    <li>Took the initiative to clarify requirements for a delayed project, proposed alternative
+                        solutions, and in the end successfully delivered</li>
+                    <li>Led meetings on automation testing and how to troubleshoot issues</li>
+                    <li>Improved our continuous integration process which led to faster compilation times and built new
+                        tools that allowed for better automated testing</li>
+                    <li>Provided assistance to the business analyst by defining acceptance criteria</li>
+                    <li>Proactively created and maintained the developer guide for new starters</li>
+                    <li>Acted as mentor and trainer for new hires</li>
+                    <li>
+                        <span style="font-weight: bold;color: #000;">Technologies used:</span> Java 8, DB2, Grails 3,
+                        Apache CXF, Mockito / Spock / Selenium
+                    </li>
 
                 </ul>
 
+                <h2>QA Automation Engineer<span>Camelot Lottery Solutions; Jun 2015 – Aug 2017</span></h2>
+
+                <ul>
+                    <li>Designed and built an application to automate the reconciliation and validation of the generated
+                        reports against the reports from the financial regulator</li>
+                    <ul style="margin: 0 0 0px 17px;">
+                        <li>Proposed the above application as a new project to the senior management team</li>
+                        <li>Gathered requirements and worked closely with QA leaders and business analysts</li>
+                        <li>Led a team of two developers and two testers</li>
+                        <li>Increased testing quality and efficiency</li>
+                        <li>Implemented APIs following domain-driven modelling</li>
+                        <li>Presented weekly demos to senior management</li>
+                    </ul>
+                    <li>Instant Win Game (IWG) tickets validator framework </li>
+                    <ul style="margin: 0 0 0px 17px;">
+                        <li>Designed and developed a framework to test the business requirements of the engines that
+                            produce IWG tickets</li>
+                        <li>Generated statistical reports directed to the senior management</li>
+                    </ul>
+                    <li>Implemented a cross-browser testing framework based on Selenium replaying specified moves on the
+                        UI, to automatically test the different price outcomes of our games</li>
+
+                    <li>
+                        <span style="font-weight: bold;color: #000;">Technologies used:</span> Java 8, Spring Boot,
+                        MySQL, Hibernate, MyBatis, JUnit / Mockito / Spock
+                    </li>
+                </ul>
 
 
             </dd>
@@ -265,7 +265,11 @@
             <dt>Education</dt>
             <dd>
                 <h2>Harokopio University of Athens</h2>
-                <p>BSc Informatics and Telematics, 2:1</p>
+                <ul>
+                    <li>Bachelor of Science in Informatics and Telematics (2:1)</li>
+                    <li>Thesis: Satellite images processing for burn scar mapping, using MapReduce and Hadoop for
+                        parallel-processing large scale data</li>
+                </ul>
             </dd>
 
             <dd class="clear"></dd>
@@ -285,19 +289,17 @@
 
             <dd class="clear"></dd>
 
-            <dt>Conferences
+            <dt>Projects
             </dt>
             <dd>
                 <ul>
-                    <li> SpringIO Barcelona 2019</li>
+                    <li>Designed and built the website for the biggest beach volleyball club in the UK <a
+                            href="https://www.sideout.club">sideout.club</a></li>
                 </ul>
             </dd>
 
 
-            <dd class="clear"></dd>
 
-            <dt>References</dt>
-            <dd>Available on request</dd>
 
             <dd class="clear"></dd>
         </dl>
