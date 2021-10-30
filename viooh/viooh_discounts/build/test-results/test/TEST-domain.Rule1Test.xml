@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="domain.Rule1Test" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-10-30T20:47:00" hostname="DESKTOP-G5MBGOC" time="0.13">
+  <properties/>
+  <testcase name="the right indexes of the checkout items are returned" classname="domain.Rule1Test" time="0.129"/>
+  <testcase name="no indexes are returned when the rules can not be applied" classname="domain.Rule1Test" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

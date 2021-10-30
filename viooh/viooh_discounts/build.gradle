@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'groovy'
+    id 'application'
+}
+
+mainClassName = 'Main'
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+    implementation 'com.univocity:univocity-parsers:2.9.1'
+    implementation 'com.google.code.gson:gson:2.8.8'
+
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.codehaus.groovy:groovy-all:2.4.4'
+    testImplementation 'org.spockframework:spock-core:1.0-groovy-2.4'
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'Main'
+        )
+    }
+}

@@ -1,0 +1,40 @@
+{
+  "rule2List": [
+    {
+      "id": 1,
+      "itemId": "apple",
+      "price": 1.5
+    },
+    {
+      "id": 2,
+      "itemId": "orange",
+      "price": 1.5
+    },
+    {
+      "id": 3,
+      "itemId": "bread",
+      "price": 2.5
+    },
+    {
+      "id": 4,
+      "itemId": "steak",
+      "price": 5.5
+    }
+  ],
+  "rule4List": [
+    {
+      "id": 5,
+      "requiredItemId": "apple",
+      "requiredItemQuantity": 4,
+      "freeItemId": "milk",
+      "freeItemQuantity": 2
+    },
+    {
+      "id": 6,
+      "requiredItemId": "book",
+      "requiredItemQuantity": 3,
+      "freeItemId": "pen",
+      "freeItemQuantity": 1
+    }
+  ]
+}
