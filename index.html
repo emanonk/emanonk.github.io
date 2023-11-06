@@ -1,40 +1,176 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Page Title</title>
+  <title>Manos.</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Roboto", sans-serif;
+    }
+
+    .w3-sidebar {
+      z-index: 3;
+      width: 250px;
+      top: 43px;
+      bottom: 0;
+      height: inherit;
+    }
+
+    .demo {
+      margin: 0 auto;
+      padding-top: 64px;
+      max-width: 640px;
+      width: 94%;
+    }
+
+    .footer {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      /* left: 0; */
+      /* padding: 1rem; */
+      /* background-color: #efefef; */
+      /* text-align: center; */
+    }
+  </style>
 </head>
 
 <body>
 
-    <h1>Manos Kammas Projects</h1>
-    <p>Select from the items in the list below.</p>
-
-    <div style="padding-left: 10px;">
-        <table style="width:100px;">
-            <tr>
-                <th>Project</th>
-
-            </tr>
-            <tr>
-                <td><a href="cv/index.html"> cv </a></td>
-            </tr>
-            <tr>
-                <td><a href="blog/index.html"> blog </a></td>
-            </tr>
-            <tr>
-                <td><a href="jackpots/index.html"> jackpots </a></td>
-            </tr>
-            <tr>
-                <td><a href="sideout_club/src/index.html"> sideout club </a></td>
-            </tr>
-            <tr>
-                <td><a href="sideout_ltd/index.html"> sideout ltd </a></td>
-            </tr>
-
-
-        </table>
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+      <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1"
+        href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+      <a href="#" class="w3-bar-item w3-button w3-theme-l1">Manos.</a>
     </div>
+  </div>
+
+  <!-- Sidebar -->
+  <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()"
+      class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <h4 class="w3-bar-item"><b>Menu</b></h4>
+    <a class="w3-bar-item w3-button w3-hover-black" href="tech.html">Tech</a>
+    <a class="w3-bar-item w3-button w3-hover-black" href="about.html">About</a>
+  </nav>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+    id="myOverlay"></div>
+
+  <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+  <div class="w3-main" style="margin-left:250px">
+
+    <div class="w3-row w3-padding-64">
+      <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Hey, I am Manos. </h1>
+        <h1 class="w3-text-teal">I am a software engineer and I've gathered a collection of tips,
+          tricks, and bookmarks to fuel your engineering journey.
+          </h1>
+        <h1 class="w3-text-teal">This right here is my website.</h1>
+        <!-- <p>I have no intention to advertise how much money I get, or give you details about my personal life like other 'Tech Leads' on youtube.</p> -->
+      </div>
+      <!-- <div class="w3-third w3-container">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+    </div> -->
+    </div>
+
+    <div class="w3-row w3-padding-64">
+      <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Heading</h1>
+        <p>some text here</p>
+      </div>
+      <!-- <div class="w3-third w3-container">
+        <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+        <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+      </div> -->
+    </div>
+
+    <div class="w3-row w3-padding-64">
+      <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Heading</h1>
+        <p>some text here</p>
+      </div>
+      <!-- <div class="w3-third w3-container">
+        <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+        <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+      </div> -->
+    </div>
+
+    <div class="w3-row w3-padding-64">
+      <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Heading</h1>
+        <p>some text here</p>
+      </div>
+      <!-- <div class="w3-third w3-container">
+        <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
+        <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD</p>
+      </div> -->
+    </div>
+
+
+    <footer id="myFooter">
+      <div class="w3-container w3-theme-l1">
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+      </div>
+    </footer>
+
+    <!-- <div class="demo">
+    <h1>CSS “Always on the bottom” Footer</h1> 
+  </div> -->
+
+
+    <!-- <div class="footer">
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </div> -->
+
+    <!-- END MAIN -->
+  </div>
+
+  <script>
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+  </script>
+
 </body>
 
 </html>
