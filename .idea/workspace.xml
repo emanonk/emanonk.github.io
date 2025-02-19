@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1357529-df2c-4263-8477-9a2aa048b3a1" name="Default Changelist" comment="">
+    <list default="true" id="b1357529-df2c-4263-8477-9a2aa048b3a1" name="Default Changelist" comment="my first article about chatgpt and ProductFamilyMatcher">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tech.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/articles/product-family-matcher-with-chatgpt2.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/articles/product-family-matcher-with-chatgpt2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,6 +123,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="my first article about chatgpt and ProductFamilyMatcher" />
+    <option name="LAST_COMMIT_MESSAGE" value="my first article about chatgpt and ProductFamilyMatcher" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/sideout_club/portfolio.html" />
