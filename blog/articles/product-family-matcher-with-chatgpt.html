@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>W3.CSS Template</title>
+    <title>MK - Lets ask chatgpt</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../style.css">
@@ -9,15 +10,27 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
     <style>
-        html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
-        .w3-sidebar {
-          z-index: 3;
-          width: 250px;
-          top: 43px;
-          bottom: 0;
-          height: inherit;
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto", sans-serif;
         }
-         .question, .answer {
+
+        .w3-sidebar {
+            z-index: 3;
+            width: 250px;
+            top: 43px;
+            bottom: 0;
+            height: inherit;
+        }
+
+        .question,
+        .answer {
             border-radius: 8px;
             padding: 10px;
             margin: 10px 0;
@@ -47,56 +60,64 @@
         }
     </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
-<div class="w3-top">
-    <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
-        <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1"
-           href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-        <a href="../../index.html" class="w3-bar-item w3-button w3-theme-l1">Manos.</a>
-        <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Tech</a>
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1"
+                href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <a href="../../index.html" class="w3-bar-item w3-button w3-theme-l1">Manos.</a>
+            <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Tech</a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Values</a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">YT Channels</a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Movies</a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Clients</a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">About</a> -->
+        </div>
     </div>
-</div>
 
-<!-- Sidebar -->
-<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
-    <a href="javascript:void(0)" onclick="w3_close()"
-       class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
-        <i class="fa fa-remove"></i>
-    </a>
-    <h4 class="w3-bar-item"><b>Menu</b></h4>
-    <a class="w3-bar-item w3-button w3-hover-black w3-button-selected" href="../articles.html">Articles</a>
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+        </a>
+        <h4 class="w3-bar-item"><b>Menu</b></h4>
+        <a class="w3-bar-item w3-button w3-hover-black w3-button-selected" href="../articles.html">Articles</a>
 
 
-    <a class="w3-bar-item w3-button w3-hover-black" href="../tech.html">Tech</a>
-    <a class="w3-bar-item w3-button w3-hover-black" href="../about.html">About</a>
-</nav>
+        <a class="w3-bar-item w3-button w3-hover-black" href="../tech.html">Tech</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="../about.html">About</a>
+    </nav>
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
-     id="myOverlay"></div>
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
 
-<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
-<div class="w3-main" style="margin-left:250px; padding-top: 32px!important;">
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px; padding-top: 32px!important;">
 
-    <div class="w3-row  w3-padding-24">
-        <div class="w3-container">
-            <h1 class="w3-text-teal">"ChatGPT and Coding: A Powerful Ally, But Not a Replacement"</h1>
-            <!-- <img src="kubernetes-icon" alt="" width="50px" height="50px"> -->
+        <div class="w3-row  w3-padding-24">
+            <div class="w3-container">
+                <h1 class="w3-text-teal">Lets ask chatgpt</h1>
+                <!-- <img src="kubernetes-icon" alt="" width="50px" height="50px"> -->
 
-            <p><strong>TL;DR:</strong></p>
-            <p>I'm exploring how ChatGPT can assist in software engineering and what its role might be in the future. While it's undoubtedly intelligent, software engineers are still essential. ChatGPT offers valuable insights, helps structure thoughts, and accelerates problem-solving, but it doesn't replace critical thinking or deep understanding. You still need to analyze, debug, and refine its solutions. </p>
-<hr>
-            <p>I asked ChatGPT the following:</p>
-            <div class="question">
-                <p>I have a list of product family codes for example:</p>
-                <pre>
+                <p><strong>TL;DR:</strong></p>
+                <p>I'm exploring how ChatGPT can assist in software engineering and what its role might be in the
+                    future. While it's undoubtedly intelligent, software engineers are still essential. ChatGPT offers
+                    valuable insights, helps structure thoughts, and accelerates problem-solving, but it doesn't replace
+                    critical thinking or deep understanding. You still need to analyze, debug, and refine its solutions.
+                </p>
+                <hr>
+                <p>So lets move to the question. I asked ChatGPT the following:</p>
+
+                <div class="question">
+
+                    <pre>
+I have a list of product family codes for example:
+
 family_1, 3
 family_2, 30
 family_3, 301
@@ -107,12 +128,13 @@ I need to find the algorithm in Java, to provide a product code in a method and 
 The product code looks like 301020. The first X number of digits shows the product family code.
 So in this example, the returned family should be family_4.
 Another example is that product code 3015010 should return family_3 as the matching digits are 301.
-Please help me with the code.</pre>
-            </div>
+Please help me with the code.
+</pre>
+                </div>
 
-            <p>The answer was:</p>
-            <div class="answer">
-        <pre><code>
+                <p>And the answer was:</p>
+                <div class="answer">
+                    <pre><code>
 import java.util.HashMap;
 import java.util.Map;
 
@@ -122,75 +144,84 @@ public class ProductFamilyMatcher {
         String familyName = null;
     }
 
-    private static final TrieNode root = new TrieNode();
+    static Map<String, String> familyCodes = new HashMap<>();
 
-    private static void insertFamilyCode(String familyCode, String familyName) {
-        TrieNode currentNode = root;
-        for (char c : familyCode.toCharArray()) {
-            currentNode = currentNode.children.computeIfAbsent(c, k -> new TrieNode());
-        }
-        currentNode.familyName = familyName;
+    static void addFamily(String code, String familyCode){
+        familyCodes.put(code, familyCode);
     }
 
-    public static String findProductFamily(String productCode) {
-        TrieNode currentNode = root;
-        for (char c : productCode.toCharArray()) {
-            currentNode = currentNode.children.get(c);
-            if (currentNode == null) {
-                return "No matching family found";
+    static String resolve(String productCode ){
+        Set<String> filtered = familyCodes.keySet().stream()
+                .filter(key -> productCode.startsWith(key))
+                .sorted( )
+                .collect(Collectors.toSet());
+
+        int lenght = 0;
+        filtered.forEach( key -> {
+            if (lenght < key.length()) {
+
             }
-        }
-        return currentNode.familyName != null ? currentNode.familyName : "No matching family found";
+        });
+
+        return "";
     }
 
     public static void main(String[] args) {
-        insertFamilyCode("1", "family_1");
-        insertFamilyCode("3", "family_2");
-        insertFamilyCode("301", "family_3");
-        insertFamilyCode("3010", "family_4");
-        insertFamilyCode("4010", "family_5");
 
-        System.out.println(findProductFamily("301020"));  // Expected output: family_4
-        System.out.println(findProductFamily("3015010")); // Expected output: family_3
-        System.out.println(findProductFamily("401234"));  // Expected output: family_5
-        System.out.println(findProductFamily("12345"));   // Expected output: family_1
+        System.out.printf("Hello and welcome!");
+        addFamily("3", "1");
+        addFamily("30", "2");
+        addFamily("301", "3");
+        addFamily("3010", "4");
+
+
+        for (int i = 1; i <= 5; i++) {
+
+            System.out.println("i = " + i);
+        }
     }
 }
         </code></pre>
-            </div>
+                </div>
 
-            <p>Then I asked:</p>
-            <div class="question">
-                <p>What is the Big-O complexity in this case?</p>
-            </div>
+                <p>Then I asked:</p>
+                <div class="question">
+                    <p>What is the Big-O complexity in this case?</p>
+                </div>
+                <p>The answer was:</p>
+                <div class="answer">
 
-            <div class="answer">
-                <p>The time complexity of this algorithm can be analyzed based on the operations in the <code>findProductFamily</code> method.</p>
-                <pre>
+                    <pre>
+The time complexity of this algorithm can be analyzed based on the operations in the findProductFamily method.
+
 Total Time Complexity: O(N×M)
 - N is the number of family codes in the map.
 - M is the length of the product code.
 
 Space Complexity: O(N)
-- We are storing N family codes in the map.</pre>
-            </div>
+- We are storing N family codes in the map.
+                    </pre>
+                </div>
 
-            <p>Then I asked:</p>
-            <div class="question">
-                <p>Could we use a tree to improve performance?</p>
-            </div>
+                <p>Then I asked:</p>
+                <div class="question">
+                    <p>Could we use a tree to improve performance?</p>
+                </div>
 
-            <p>The answer was:</p>
-            <div class="answer">
-                <p>Yes! You're on the right track. Using a prefix tree (Trie) can significantly improve performance by reducing the number of comparisons.</p>
-                <pre>
+                <p>The answer was:</p>
+                <div class="answer">
+                    <pre>
+Yes! You're on the right track. Using a prefix tree (Trie) can significantly improve performance by reducing the number of comparisons.
+
 Time Complexity for querying: O(M), where M is the length of the product code.
-This is a significant improvement over O(N×M).</pre>
-            </div>
+This is a significant improvement over O(N×M).
+                    </pre>
+                </div>
 
 
-            <div class="answer">
-        <pre><code>
+                <div class="answer">
+                    <pre>
+                        <code>
 import java.util.HashMap;
 import java.util.Map;
 
@@ -249,33 +280,151 @@ public class ProductFamilyMatcher {
     System.out.println(findProductFamily("12345"));   // Expected output: family_1
   }
 }
-        </code></pre>
+                        </code>
+                     </pre>
+                </div>
+                <p>The code above does not work.</p>
+
+                <p>find the fixed code on <a
+                        href="https://github.com/emanonk/algorithms-datastructures-examples/blob/main/src/main/java/interview/ProductFamilyMatcher.java">github</a>
+                    or below</p>
+
+                <!--  -->
+                <div class="answer">
+                    <pre>
+        <code>
+package interview;
+import java.util.HashMap;
+import java.util.Map;
+
+public class ProductFamilyMatcher {
+
+    // Trie Node class
+    static class TrieNode {
+        Map<Character, TrieNode> children = new HashMap<>();
+        String familyName = null;  // This will store the family name at the leaf node
+    }
+
+    // Root of the Trie
+    private static final TrieNode root = new TrieNode();
+
+    // Method to insert family codes into the Trie
+    private static void insertFamilyCode(String familyCode, String familyName) {
+        TrieNode currentNode = root;
+
+        // Traverse each character in the family code
+        for (char c : familyCode.toCharArray()) {
+            currentNode = currentNode.children.computeIfAbsent(c, k -> new TrieNode());
+        }
+
+        // Set the family name at the leaf node
+        currentNode.familyName = familyName;
+    }
+
+    // Method to find the family for a given product code
+    public static String findProductFamily(String productCode) {
+        TrieNode currentNode = root;
+
+        TrieNode lastMatchNode = root;
+        // Traverse the Trie based on the product code
+        for (char c : productCode.toCharArray()) {
+            currentNode = currentNode.children.get(c);
+            if (currentNode == null) {
+                break;
+            } else {
+                lastMatchNode = currentNode;
+            }
+        }
+
+
+        // Return the family name at the last matched node
+        return lastMatchNode.familyName != null ? lastMatchNode.familyName : "No matching family found";
+    }
+
+    public static void main(String[] args) {
+        // Insert family codes into the Trie
+        insertFamilyCode("1", "family_1");
+        insertFamilyCode("3", "family_2");
+        insertFamilyCode("301", "family_3");
+        insertFamilyCode("3010", "family_4");
+        insertFamilyCode("4010", "family_5");
+
+        // Test cases
+        System.out.println(findProductFamily("301020"));  // Expected output: family_4
+        System.out.println(findProductFamily("3015010")); // Expected output: family_3
+        System.out.println(findProductFamily("401234"));  // Expected output: family_5
+        System.out.println(findProductFamily("12345"));   // Expected output: family_1
+    }
+}
+</code>
+</pre>
+                </div>
+
+
+
+                <p>Then I asked:</p>
+                <div class="question">
+                    <p>tell some reasons why I should always validate and check the code that you(chatgpt) suggest</p>
+                </div>
+
+                <p>The answer was:</p>
+                <div class="answer">
+
+                    <pre>
+It's always a good idea to validate and check the code I suggest for several reasons:
+
+1. Context Limitations
+    I rely on the context you provide, but I might miss specific project constraints, coding standards, or architectural decisions.
+    If I misunderstand your requirements, my solution might not fit your exact needs.
+2. Syntax & Compatibility Issues
+    While I aim to generate syntactically correct code, minor errors may occur due to differences in language versions, frameworks, or dependencies.
+    Your environment (e.g., Java version, Spring Boot configuration) might have constraints I’m unaware of.
+3. Security Concerns
+    Code involving authentication, encryption, or external inputs should always be reviewed for potential vulnerabilities.
+    I don't run security audits, so it's crucial to check for risks like SQL injection, XSS, or insecure data handling.
+4. Performance Optimization
+    I might suggest a working solution, but not necessarily the most efficient one.
+    Some optimizations depend on your data size, concurrency needs, or specific business rules.
+5. Integration with Existing Codebase
+    My code suggestions may not perfectly align with your existing architecture, patterns, or dependencies.
+    You may need to adapt my code to match your team's coding style and best practices.
+6. Testing & Edge Cases
+    My code is not tested in a real environment, so unexpected edge cases might arise.
+    Always run unit and integration tests to verify correctness and stability.
+7. Legal & Licensing Considerations
+    If you're using open-source dependencies, verify their licenses to avoid compliance issues.
+8. Business Logic Accuracy
+    I don’t have deep domain knowledge of your specific business rules unless explicitly provided.
+    Double-check that my logic aligns with your requirements, especially for critical applications.
+
+                    </pre>
+                </div>
+
+                <!--  -->
+
+                <br>
+                <p>Final Thoughts:</p>
+                <p>
+                    ChatGPT is an intelligent tool, but it reduces your ability to think and organize your thoughts.
+                    I got a solution, but I had to validate and debug it myself to make it work.
+
+                </p>
+
             </div>
-            <p>The code above does not work.</p>
-            <a href="https://github.com/emanonk/algorithms-datastructures-examples/blob/main/src/main/java/interview/ProductFamilyMatcher.java">find the fixed code here</a>
-
-            <p>Final Thoughts:</p>
-            <p>
-                ChatGPT is an intelligent tool, but it reduces your ability to think and organize your thoughts.
-                I got a solution ready, but I had to validate and debug it myself to make it work.
-
-            </p>
-
         </div>
-    </div>
 
 
 
 
-    <div class="w3-row  w3-padding-24">
-        <div class="w3-container">
-            <p>posted 19.02.2025</p>
+        <div class="w3-row  w3-padding-24">
+            <div class="w3-container">
+                <p>posted 19.02.2025</p>
+            </div>
         </div>
-    </div>
 
 
-    <!-- Pagination -->
-    <!-- <div class="w3-center w3-padding-32">
+        <!-- Pagination -->
+        <!-- <div class="w3-center w3-padding-32">
       <div class="w3-bar">
         <a class="w3-button w3-black" href="#">1</a>
         <a class="w3-button w3-hover-black" href="#">2</a>
@@ -286,50 +435,51 @@ public class ProductFamilyMatcher {
       </div>
     </div> -->
 
-    <footer id="myFooter">
-        <!-- <div class="w3-container w3-theme-l2 w3-padding-32">
+        <footer id="myFooter">
+            <!-- <div class="w3-container w3-theme-l2 w3-padding-32">
           <h4>Footer</h4>
         </div> -->
 
-        <div class="w3-container w3-theme-l1" style="text-align: center;">
-            <!-- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p> -->
-            <p>©2023 Manos Kammas</p>
-            <a href="https://www.linkedin.com/in/manoskammas/"><i class="fab fa-linkedin"
-                                                                  style="font-size:36px"></i></a>
-            <a href="https://twitter.com/ManosKammas"><i class="fab fa-twitter" style="font-size:36px"></i></a>
-            <a href="https://fosstodon.org/@manoskammas"><i class="fa-brands fa-mastodon"
-                                                            style="font-size:36px"></i></a>
-            <a href="https://github.com/emanonk"><i class="fab fa-github" style="font-size:36px"></i></a>
-        </div>
-    </footer>
+            <div class="w3-container w3-theme-l1" style="text-align: center;">
+                <!-- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p> -->
+                <p>©2023 Manos Kammas</p>
+                <a href="https://www.linkedin.com/in/manoskammas/"><i class="fab fa-linkedin"
+                        style="font-size:36px"></i></a>
+                <a href="https://twitter.com/ManosKammas"><i class="fab fa-twitter" style="font-size:36px"></i></a>
+                <a href="https://fosstodon.org/@manoskammas"><i class="fa-brands fa-mastodon"
+                        style="font-size:36px"></i></a>
+                <a href="https://github.com/emanonk"><i class="fab fa-github" style="font-size:36px"></i></a>
+            </div>
+        </footer>
 
-    <!-- END MAIN -->
-</div>
+        <!-- END MAIN -->
+    </div>
 
-<script>
-    // Get the Sidebar
-    var mySidebar = document.getElementById("mySidebar");
+    <script>
+        // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
 
-    // Get the DIV with overlay effect
-    var overlayBg = document.getElementById("myOverlay");
+        // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
 
-    // Toggle between showing and hiding the sidebar, and add overlay effect
-    function w3_open() {
-      if (mySidebar.style.display === 'block') {
-        mySidebar.style.display = 'none';
-        overlayBg.style.display = "none";
-      } else {
-        mySidebar.style.display = 'block';
-        overlayBg.style.display = "block";
-      }
-    }
+        // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+                overlayBg.style.display = "none";
+            } else {
+                mySidebar.style.display = 'block';
+                overlayBg.style.display = "block";
+            }
+        }
 
-    // Close the sidebar with the close button
-    function w3_close() {
-      mySidebar.style.display = "none";
-      overlayBg.style.display = "none";
-    }
-</script>
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+            overlayBg.style.display = "none";
+        }
+    </script>
 
 </body>
+
 </html>
