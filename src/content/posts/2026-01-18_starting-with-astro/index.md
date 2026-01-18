@@ -5,51 +5,88 @@ pubDate: 'Jan 18 2026'
 heroImage: '2026-01-18_starting-with-astro/img/astro.jpg'
 ---
 
-## Why Astro
+## 1. The Goal
 
-This blog is intentionally simple.
+For years, I’ve learned engineering mostly the same way many of us do:
+by reading other people’s notes, blog posts, and explanations.
 
-It contains:
-- a short introduction about me
-- engineering notes I want to keep around
-- a CV that doesn’t live in a forgotten folder
+Often these were not polished articles or tutorials.
+They were personal notes — concise, opinionated, sometimes incomplete — but incredibly valuable.
 
-That simplicity heavily influenced the technology choice.
+The goal of this blog is simple:
 
-Astro stood out for a few very pragmatic reasons.
+- Make my personal engineering notes public
+- Keep them easy to write and maintain
+- Avoid any friction that would discourage writing
 
-### Content-first by design
+This immediately ruled out anything complex.
+I wanted to write, commit, and publish — ideally in minutes.
 
-Most personal blogs are text. Astro treats Markdown as a first-class citizen and generates static HTML by default.
+Markdown (`.md`) was a hard requirement.
+If writing a post feels heavier than writing code comments, the system has already failed.
 
-There is no unnecessary JavaScript, no client-side rendering, and no framework runtime unless explicitly requested.
+## 2. Why Astro
 
-This makes Astro ideal for writing-focused sites.
+### What were the alternatives?
 
-### Static by default, interactive only when needed
+Before settling on Astro, there were a few obvious options.
 
-Astro’s island architecture ensures that the site ships as plain HTML unless interactivity is deliberately added.
+**Plain HTML**
+- Simple and fast
+- Quickly becomes painful to maintain
+- Repetitive layouts and navigation
 
-This avoids the common mistake of turning a blog into a single-page application without intending to.
+**Classic frontend frameworks (React, Vue, Angular)**
+- Powerful, but overkill for a content-first site
+- Turn a blog into a client-side application
+- Add complexity where none is needed
 
-### Low maintenance and future-proof
+**Other static site generators (Jekyll, Hugo, Gatsby)**
+- Jekyll: mature, but slow and Ruby-based
+- Hugo: fast, but opinionated and template-heavy
+- Gatsby: React-first and increasingly complex
 
-Astro does not lock you into a specific frontend framework.
+All of them work. None of them felt like the right balance.
 
-If I ever need Vue, React, or something else, I can introduce it locally and intentionally.
-If I never need it, nothing is lost.
+### Why Astro made sense
 
-### A natural fit for GitHub Pages
+Astro matched the exact constraints of this project.
 
-Astro produces static output with a simple build process and no backend requirements.
+- Content-first approach
+- Markdown as a first-class citizen
+- Static HTML by default
+- Zero JavaScript unless explicitly needed
 
-That makes it a perfect match for GitHub Pages.
+Astro does not assume your site is an application.
+It assumes it is content — and optimizes for that.
 
-## Installation and Setup
+If I ever need interactivity, Astro allows adding it locally and deliberately,
+without turning the entire site into a SPA.
 
-The setup process was deliberately kept minimal.
+### Markdown as the primary interface
 
-### 1. Create the project
+Posts are plain `.md` files.
+No CMS, no database, no UI editor.
+
+Git *is* the workflow.
+
+That alone removes an enormous amount of friction and cognitive load.
+
+### Fast feedback, fast results
+
+With the help of Astro and modern tooling, I had:
+- a running website
+- local development
+- content rendering
+
+in under **15 minutes**.
+
+At that point, the tooling disappears and writing becomes the main activity again.
+That is exactly what I wanted.
+
+## 3. Installation and Setup
+
+### Create the project
 
 Using the official Astro initializer:
 
@@ -57,61 +94,56 @@ Using the official Astro initializer:
 npm create astro@latest my-blog
 cd my-blog
 npm install
-
-
-
-```
-
-```bash
-npm create astro@latest . -- --template blog --install --yes
 ```
 
 During setup, the following options were selected:
 - Static site
 - Minimal template
-- TypeScript (optional, but recommended)
+- TypeScript (optional but recommended)
 
-### 2. Run locally
+### Run locally
 
 ```bash
 npm run dev
 ```
 
-Astro starts a local development server with fast hot reloads.
+This starts a local development server with fast hot reload.
 
-### 3. Project structure
+### Writing content
 
-Blog content lives in Markdown files under the `content` directory, while pages and layouts remain thin and reusable.
-
-A simplified structure looks like this:
+Blog posts live as Markdown files, typically under:
 
 ```
-src/
-  content/
-    blog/
-      astro-intro.md
-  pages/
-  layouts/
+src/content/blog/
 ```
 
-Markdown files contain the content.
-Astro handles turning them into static HTML pages.
+Each file contains frontmatter metadata and plain Markdown content.
+Astro takes care of turning these into static HTML pages.
 
-### 4. Build and deploy
+### Build and deploy
 
-To generate the static site:
+To generate the production-ready static site:
 
 ```bash
 npm run build
 ```
 
-The output is a set of static files that can be deployed directly to GitHub Pages.
+The output can be deployed directly to GitHub Pages or any static hosting provider.
+
+## Documentation
+
+Astro’s documentation is clear, concise, and worth reading:
+
+- Official docs: https://docs.astro.build
+
+They cover content collections, Markdown, layouts, and deployment in detail.
 
 ## Closing thoughts
 
-This blog is not meant to impress.
+This blog is not a product.
+It’s a notebook that happens to be public.
 
-It’s meant to last.
+Astro provides just enough structure to keep things organized,
+while staying out of the way of writing and thinking.
 
-Astro provides just enough structure without getting in the way of writing and thinking.
-For a personal blog, that is exactly the point.
+For a personal engineering blog, that balance matters more than anything else.
