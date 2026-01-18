@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import { getCollection } from 'astro:content';
 import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
@@ -7,9 +8,25 @@ import FormattedDate from '../../components/FormattedDate.astro';
 import Header from '../../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 
+const heroImages = import.meta.glob('../../content/posts/**/img/*.{avif,gif,jpeg,jpg,png,webp}', {
+	eager: true,
+});
+
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+const postsWithHero = posts.map((post) => {
+	const heroImageModule = post.data.heroImage
+		? (heroImages[`../../content/posts/${post.data.heroImage}`] as
+				| { default: ImageMetadata }
+				| undefined)
+		: undefined;
+
+	return {
+		post,
+		heroImage: heroImageModule?.default,
+	};
+});
 ---
 
 <!doctype html>
@@ -92,12 +109,10 @@ const posts = (await getCollection('blog')).sort(
 			<section>
 				<ul>
 					{
-						posts.map((post) => (
+						postsWithHero.map(({ post, heroImage }) => (
 							<li>
 								<a href={`/blog/${post.id}/`}>
-									{post.data.heroImage && (
-										<Image width={720} height={360} src={post.data.heroImage} alt="" />
-									)}
+									{heroImage && <Image width={720} height={360} src={heroImage} alt="" />}
 									<h4 class="title">{post.data.title}</h4>
 									<p class="date">
 										<FormattedDate date={post.data.pubDate} />
