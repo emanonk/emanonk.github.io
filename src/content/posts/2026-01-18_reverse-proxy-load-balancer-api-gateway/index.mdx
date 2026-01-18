@@ -8,6 +8,9 @@ heroImage: 'posts/2026-01-18_reverse-proxy-load-balancer-api-gateway/alltogether
 
 import { Image } from 'astro:assets';
 import allTogether from '../../../assets/posts/2026-01-18_reverse-proxy-load-balancer-api-gateway/alltogether.png';
+import nginx_and_apigateway_and_reverseproxy from '../../../assets/posts/2026-01-18_reverse-proxy-load-balancer-api-gateway/nginx_and_apigateway_and_reverseproxy.png';
+import nginx from '../../../assets/posts/2026-01-18_reverse-proxy-load-balancer-api-gateway/nginx.png';
+import api_load from '../../../assets/posts/2026-01-18_reverse-proxy-load-balancer-api-gateway/api-load.png';
 
 Modern backend architectures often use **reverse proxies**, **load balancers**, and **API gateways**.  
 They are related, often used together, but they solve **different problems at different layers**.
@@ -195,21 +198,16 @@ Client → API Gateway
 
 ## Common Real-World Setup
 
-<Image src={allTogether} alt="Common setup with API gateway, load balancer, and service instances" />
 
-```text
-Client
-  ?+"
-API Gateway
-  ?+"
-Load Balancer
-  ?+"
-Service Instances
-```
+
+<Image src={nginx_and_apigateway_and_reverseproxy} alt="Common setup with API gateway, load balancer, and service instances" />
+<Image src={nginx} alt="Common setup with API gateway, load balancer, and service instances" />
+<Image src={api_load} alt="Common setup with API gateway, load balancer, and service instances" />
+
 
 These components **do not compete** — they complement each other and are often used together in modern systems.
 
-## References
+
 ## References
 
 - [NGINX Reverse Proxy Docs](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/)
