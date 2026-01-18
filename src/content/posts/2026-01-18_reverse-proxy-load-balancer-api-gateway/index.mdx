@@ -1,0 +1,219 @@
+---
+title: 'Reverse Proxy vs Load Balancer vs API Gateway'
+description: 'A practical explanation of the differences between reverse proxies, load balancers, and API gateways.'
+pubDate: '2026-01-18'
+tags: ['architecture', 'backend', 'microservices', 'devops']
+heroImage: 'posts/2026-01-18_reverse-proxy-load-balancer-api-gateway/alltogether.png'
+---
+
+import { Image } from 'astro:assets';
+import allTogether from '../../../assets/posts/2026-01-18_reverse-proxy-load-balancer-api-gateway/alltogether.png';
+
+Modern backend architectures often use **reverse proxies**, **load balancers**, and **API gateways**.  
+They are related, often used together, but they solve **different problems at different layers**.
+
+This article explains:
+- What each component does
+- How they differ
+- When to use each one
+- Common load balancing algorithms
+
+---
+
+## Reverse Proxy
+
+A **reverse proxy** sits in front of one or more backend servers and forwards client requests to them.  
+Clients never communicate directly with the backend services.
+
+### Responsibilities
+- Acts as a single entry point
+- Hides internal services and network topology
+- TLS/SSL termination
+- Caching and compression
+- Basic authentication
+- Request routing
+
+### What it does *not* focus on
+- Advanced traffic distribution strategies
+- API-level concerns like rate limiting or versioning
+
+### Example
+
+```text
+Client → Reverse Proxy → Application Server
+```
+
+### When to use it
+- You want to hide backend services
+- You need SSL termination
+- You want caching or static content delivery
+- You want simple routing based on path or host
+
+---
+
+## Load Balancer
+
+A **load balancer** distributes incoming traffic across **multiple instances of the same service** to improve scalability, availability, and fault tolerance.
+
+### Responsibilities
+- Distribute traffic across service replicas
+- Perform health checks
+- Detect failures and reroute traffic
+- Enable horizontal scaling
+- Support zero-downtime deployments
+
+### Example
+
+```text
+Client → Load Balancer → App Instance 1
+                         App Instance 2
+                         App Instance 3
+```
+
+---
+
+## Load Balancing Algorithms
+
+Load balancers use algorithms to decide **which backend instance** should handle each request.
+
+### Round Robin
+
+Requests are distributed sequentially across all available instances.
+
+```text
+Request 1 → Instance A
+Request 2 → Instance B
+Request 3 → Instance C
+Request 4 → Instance A
+```
+
+**Pros**
+- Simple
+- Even distribution
+
+**Cons**
+- Ignores current load
+
+**Best for**
+- Stateless services
+- Uniform request cost
+
+---
+
+### Least Connections
+
+Each request is routed to the instance with the **fewest active connections**.
+
+**Pros**
+- Adapts to uneven workloads
+- Better for long-running requests
+
+**Cons**
+- Slightly more complex
+- Requires tracking active connections
+
+**Best for**
+- APIs with variable processing time
+- WebSockets or long-lived connections
+
+---
+
+### IP Hash
+
+The client’s IP address is hashed to decide which backend handles the request.
+
+```text
+hash(client_ip) → backend instance
+```
+
+**Pros**
+- Session persistence (sticky sessions)
+- Same client consistently hits the same backend
+
+**Cons**
+- Uneven load distribution
+- Scaling up/down can reshuffle traffic
+
+**Best for**
+- Stateful applications
+- Legacy systems without shared session storage
+
+---
+
+## API Gateway
+
+An **API Gateway** is a specialized entry point designed for **APIs**, especially in microservices architectures.
+
+It often includes **reverse proxy and load balancing capabilities**, but adds **API-level intelligence**.
+
+### Responsibilities
+- Authentication and authorization (JWT, OAuth2, API keys)
+- Rate limiting and throttling
+- Request and response transformation
+- API versioning (`/v1`, `/v2`)
+- Routing to multiple backend services
+- Monitoring, logging, and analytics
+
+### Example
+
+```text
+Client → API Gateway
+           ├── Auth Service
+           ├── Orders Service
+           └── Payments Service
+```
+
+### When to use it
+- You expose public or partner APIs
+- You run microservices
+- You need security, rate limiting, and versioning
+- You want a clean separation between clients and services
+
+---
+
+## Comparison Table
+
+| Feature | Reverse Proxy | Load Balancer | API Gateway |
+|------|--------------|--------------|-------------|
+| Entry point | ✅ | ✅ | ✅ |
+| Distributes traffic | ⚠️ Basic | ✅ | ✅ |
+| Hides backend | ✅ | ❌ | ✅ |
+| API authentication | ❌ | ❌ | ✅ |
+| Rate limiting | ❌ | ❌ | ✅ |
+| Request transformation | ❌ | ❌ | ✅ |
+| Best suited for | Infrastructure | Scalability | APIs & Microservices |
+
+---
+
+## Mental Model
+
+- **Reverse Proxy** → Traffic director  
+- **Load Balancer** → Traffic distributor  
+- **API Gateway** → Traffic manager with rules  
+
+---
+
+## Common Real-World Setup
+
+<Image src={allTogether} alt="Common setup with API gateway, load balancer, and service instances" />
+
+```text
+Client
+  ?+"
+API Gateway
+  ?+"
+Load Balancer
+  ?+"
+Service Instances
+```
+
+These components **do not compete** — they complement each other and are often used together in modern systems.
+
+## References
+## References
+
+- [NGINX Reverse Proxy Docs](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/)
+- [AWS What is Load Balancing](https://aws.amazon.com/what-is/load-balancing/)
+- [AWS API Gateway Overview](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
+- [Reverse Proxy vs API Gateway vs Load Balancer - ByteByteGo channel](https://youtu.be/RqfaTIWc3LQ)
+

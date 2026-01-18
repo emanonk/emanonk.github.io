@@ -3,7 +3,7 @@ import type { ImageMetadata } from 'astro';
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
 
-const heroImages = import.meta.glob('../../content/posts/**/img/*.{avif,gif,jpeg,jpg,png,webp}', {
+const heroImages = import.meta.glob('../../assets/posts/**/*.{avif,gif,jpeg,jpg,png,webp}', {
 	eager: true,
 });
 
@@ -19,7 +19,7 @@ type Props = CollectionEntry<'blog'>;
 const post = Astro.props;
 const { Content } = await render(post);
 const heroImageModule = post.data.heroImage
-	? (heroImages[`../../content/posts/${post.data.heroImage}`] as { default: ImageMetadata } | undefined)
+	? (heroImages[`../../assets/${post.data.heroImage}`] as { default: ImageMetadata } | undefined)
 	: undefined;
 const heroImage = heroImageModule?.default;
 ---

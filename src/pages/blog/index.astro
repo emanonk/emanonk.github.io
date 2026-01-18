@@ -8,7 +8,7 @@ import FormattedDate from '../../components/FormattedDate.astro';
 import Header from '../../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 
-const heroImages = import.meta.glob('../../content/posts/**/img/*.{avif,gif,jpeg,jpg,png,webp}', {
+const heroImages = import.meta.glob('../../assets/posts/**/*.{avif,gif,jpeg,jpg,png,webp}', {
 	eager: true,
 });
 
@@ -17,7 +17,7 @@ const posts = (await getCollection('blog')).sort(
 );
 const postsWithHero = posts.map((post) => {
 	const heroImageModule = post.data.heroImage
-		? (heroImages[`../../content/posts/${post.data.heroImage}`] as
+		? (heroImages[`../../assets/${post.data.heroImage}`] as
 				| { default: ImageMetadata }
 				| undefined)
 		: undefined;
